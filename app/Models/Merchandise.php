@@ -7,5 +7,9 @@ use Illuminate\Database\Eloquent\Model;
 
 class Merchandise extends Model
 {
-    use HasFactory;
+    protected $fillable = ['name', 'price', 'detail', 'stock'];
+
+    public function merchandise_histories(){
+        return $this->belongsToMany(History::class, "merchandise__histories", "merchandise_id", "history_id");
+    }
 }

@@ -18,7 +18,6 @@ class CreateHistoriesTable extends Migration
             $table->foreignId('user_id');
             $table->foreign('user_id')->references('id')->on('users')->onUpdate('cascade')->onDelete('cascade');
             $table->string('type');
-            $table->string('name');
             $table->integer('total_quantity');
             $table->integer('total_price');
             $table->date('date');

@@ -7,5 +7,5 @@ use Illuminate\Database\Eloquent\Model;
 
 class Merchandise_History extends Model
 {
-    use HasFactory;
+    protected $fillable = ['history_id', 'merchandise_id'];
 }
