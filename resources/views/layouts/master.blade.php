@@ -19,7 +19,7 @@
 
 
     {{-- SLIDER --}}
-    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+    {{-- <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
         <ol class="carousel-indicators">
             <li data-target="" data-slide-to="0" class="active"></li>
             <li data-target="" data-slide-to="1"></li>
@@ -53,10 +53,11 @@
                 <span class="sr-only">Next</span>
             </a>
         </div>
-    </div>
+    </div> --}}
 
     <div>
         @yield('homepage')
+        @yield('content')
     </div>
 
     {{-- FOOTER --}}

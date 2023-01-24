@@ -1,4 +1,4 @@
-body {
+.body {
     min-height: 100vh;
     margin: 0;
     display: grid;
@@ -33,3 +33,5 @@ body {
     display: flex;
     flex: 1 1 auto;
 }
+
+

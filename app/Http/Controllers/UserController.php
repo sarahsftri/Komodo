@@ -11,7 +11,7 @@ use App\Models\User;
 class UserController extends Controller
 {
     public function viewLoginPage(){
-        return view('login');
+        return view('layouts.login');
     }
 
     public function login(){
