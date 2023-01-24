@@ -33,11 +33,20 @@ class MerchandiseSeeder extends Seeder
         
         DB:: table('merchandises')->insert([
             'id' => 3,
-            'name' => "Komodo Stickers",
+            'name' => "Komodo Sticker",
             'price' => 30000,
             'detail' => "Super durable and water-resistant",
             'stock' => 200,
             'image' => "https://ih1.redbubble.net/image.1669427998.4622/st,small,507x507-pad,600x600,f8f8f8.jpg"
+        ]);
+        
+        DB:: table('merchandises')->insert([
+            'id' => 4,
+            'name' => "I Love Komodo Sticker",
+            'price' => 30000,
+            'detail' => "Super durable and water-resistant",
+            'stock' => 400,
+            'image' => "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSasEYnv8hLLMggAleOplaV9GDlVEV1i3bT8a-6bhCCWDiTHSGEcyu27rVw8UCiW-lf38o&usqp=CAU"
         ]);
     }
 }
