@@ -3,17 +3,27 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Merchandise;
 
 class MerchandiseController extends Controller
 {
-    // insert
+    public function insertMerchandise(){
 
-    // update
+    }
 
-    // delete
+    public function updateMerchandise(){
+
+    }
+
+    public function deleteMerchandise(){
+
+    }
 
     public function viewMerchandisePage(){
-        return view('merchandise');
+        $latest = Merchandise::orderBy('created_at', 'DESC')->get();
+        $merch = Merchandise::paginate(8);
+
+        return view('merchandise')->with('latest')->with('merch');
     }
 
     public function addToCart($merchandise_id){
