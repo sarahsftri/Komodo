@@ -84,5 +84,14 @@ class MerchandiseSeeder extends Seeder
             'stock' => 300,
             'image' => "https://m.media-amazon.com/images/I/41FZFxUwsdS._AC_SY580_.jpg"
         ]);
+        
+        DB:: table('merchandises')->insert([
+            'id' => 9,
+            'name' => "Komodo Drawstring Bag",
+            'price' => 80000,
+            'detail' => "Made from 100% polyester woven fabric with high-quality metal grommets",
+            'stock' => 500,
+            'image' => "https://ih1.redbubble.net/image.198874179.9335/drawstring_bag,x750-pad,750x1000,f8f8f8.jpg"
+        ]);
     }
 }
