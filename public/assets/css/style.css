@@ -8,3 +8,10 @@ body {
 .nav-item{
     padding: 5px;
 }
+
+.nav-item .nav-link{
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
