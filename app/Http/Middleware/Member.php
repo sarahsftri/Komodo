@@ -17,7 +17,7 @@ class Member
     public function handle(Request $request, Closure $next)
     {
         if(!Auth::check() || Auth::user()->role != 'member'){
-            return abort(401);
+            return view('register')->withErrors(['unregistered' => 'You need to register an account beforehand!']);
         }
         return $next($request);
     }

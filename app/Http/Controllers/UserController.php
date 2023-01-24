@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Cookie;
 use Illuminate\Support\Facades\Session;
+use App\Models\User;
 
 class UserController extends Controller
 {
@@ -69,5 +70,21 @@ class UserController extends Controller
     public function logout(){
         Auth::logout();
         return redirect('/login');
+    }
+
+    public function viewProfilePage(){
+        return view('profile');
+    }
+
+    public function editProfile(Request $request){
+        $user_id = Auth::user()->id;
+        $currUser = User::find($user_id);
+
+        $currUser->name = $request->name;
+        $currUser->phone_number = $request->phone_number;
+        $currUser->address = $request->address;
+        $currUser->save();
+
+        return redirect('/profile');
     }
 }

@@ -19,6 +19,7 @@ class CreateMerchandisesTable extends Migration
             $table->integer('price');
             $table->string('detail');
             $table->integer('stock');
+            $table->string('image');
             $table->timestamps();
         });
     }
