@@ -10,7 +10,7 @@
                 <a class="nav-link" href="#">Home</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#">Donation</a>
+                <a class="nav-link" href="/donation">Donation</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="#">Ticket</a>
