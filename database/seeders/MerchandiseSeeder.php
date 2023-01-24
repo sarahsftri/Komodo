@@ -93,5 +93,14 @@ class MerchandiseSeeder extends Seeder
             'stock' => 500,
             'image' => "https://ih1.redbubble.net/image.198874179.9335/drawstring_bag,x750-pad,750x1000,f8f8f8.jpg"
         ]);
+        
+        DB:: table('merchandises')->insert([
+            'id' => 10,
+            'name' => "Komodo Spiral Notebook",
+            'price' => 30000,
+            'detail' => "120 pages, Cover 350gsm, paper stock 90gsm",
+            'stock' => 200,
+            'image' => "https://ih1.redbubble.net/image.850541430.2963/sn,x1000-pad,1000x1000,f8f8f8.u3.jpg"
+        ]);
     }
 }
