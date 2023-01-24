@@ -41,7 +41,7 @@ class UserController extends Controller
     }
 
     public function viewRegisterPage(){
-        return view('register');
+        return view('layouts.register');
     }
 
     public function register(){
