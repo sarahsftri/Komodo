@@ -7,6 +7,10 @@ use App\Models\Ticket;
 
 class TicketController extends Controller
 {
+    public function viewTicketPage(){
+        return view('ticket');
+    }
+
     public function purchaseTickets(Request $request){
         $ticket_id = $request->id;
         $history_id = HistoryController::createTicketHistory($request->quantity, $request->price);

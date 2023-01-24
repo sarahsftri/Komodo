@@ -12,5 +12,13 @@ class MerchandiseController extends Controller
 
     // delete
 
-    // add to cart
+    public function viewMerchandisePage(){
+        return view('merchandise');
+    }
+
+    public function addToCart($merchandise_id){
+        CartController::addMerchToCart($request->id);
+
+        return redirect()->back();
+    }
 }

@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\UserController;
+use App\Http\Controllers\TicketController;
 
 /*
 |--------------------------------------------------------------------------
@@ -26,4 +27,9 @@ Route::get('/logout', [UserController::class, 'logout']);
 Route::get('/profile', [UserController::class, 'viewProfilePage'])->middleware('admin', 'member');
 Route::patch('/edit-profile', [UserController::class, 'editProfile'])->middleware('admin', 'member');
 
-Route::get('/');
+Route::get('/ticket', [TicketController::class, 'viewTicketPage'])->middleware('member');
+Route::post('/ticket', [TicketController::class, 'purchaseTicket'])->middleware('member');
+
+
+Route::get('/merchandise', [MerchandiseController::class, 'viewMerchandisePage'])->middleware('admin', 'member');
+Route::post('/merchandise/{merchandise_id}', [MerchandiseController::class, 'addToCart'])->middleware('member');
