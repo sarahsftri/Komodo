@@ -66,5 +66,14 @@ class MerchandiseSeeder extends Seeder
             'stock' => 300,
             'image' => "https://rlv.zcache.com/realistic_komodo_dragon_monitor_lizard_coffee_mug-r2f0eeaf6be724aaab22a0aba689e6d7f_x7jg5_8byvr_736.webp"
         ]);
+        
+        DB:: table('merchandises')->insert([
+            'id' => 7,
+            'name' => "Komodo Throw Pillow",
+            'price' => 50000,
+            'detail' => "Full-color double-sided design printed, Machine washable",
+            'stock' => 200,
+            'image' => "https://res.cloudinary.com/teepublic/image/private/s--4smZA6fs--/c_crop,x_10,y_10/c_fit,h_788/c_crop,g_north_west,h_1051,w_1051,x_-214,y_-129/l_upload:v1507037314:production:blanks:gbajnunp66ec7xftnpq1/fl_layer_apply,g_north_west,x_-319,y_-228/b_rgb:ffffff/c_limit,f_auto,h_630,q_90,w_630/v1668282209/production/designs/36467378_0.jpg"
+        ]);
     }
 }
