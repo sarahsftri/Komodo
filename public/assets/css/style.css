@@ -28,3 +28,8 @@ body {
     display:block;
     border-radius: 50px;
 }
+
+.card-horizontal {
+    display: flex;
+    flex: 1 1 auto;
+}

@@ -17,6 +17,7 @@ use App\Http\Controllers\TicketController;
 
 Route::get('/', function () {
     return view('layouts.homepage');
+    // return view('partials.navbar_member');
 });
 
 Route::get('/login', [UserController::class, 'viewLoginPage']);
