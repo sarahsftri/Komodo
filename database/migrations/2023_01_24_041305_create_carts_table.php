@@ -18,6 +18,7 @@ class CreateCartsTable extends Migration
             $table->foreign('user_id')->references('id')->on('users')->onUpdate('cascade')->onDelete('cascade');
             $table->foreignId('merchandise_id');
             $table->foreign('merchandise_id')->references('id')->on('merchandises')->onUpdate('cascade')->onDelete('cascade');
+            $table->integer('quantity')->default(1);
             $table->timestamps();
         });
     }
