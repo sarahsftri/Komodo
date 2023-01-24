@@ -10,7 +10,7 @@
                 <a class="nav-link" href="#">Home</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#">Donation</a>
+                <a class="nav-link" href="/donation">Donation</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="#">Ticket</a>
@@ -28,7 +28,7 @@
             </li>
 
             <li class="nav-item">
-                <button type="button" class="btn btn-outline-primary">Sign Up</button>
+                <a class="btn btn-primary" href="/register" role="button">Register</a>
             </li>
         </ul>
     </div>
