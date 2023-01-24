@@ -15,45 +15,9 @@
 <body>
     {{-- NAVBAR GUEST --}}
     @include('partials.navbar_guest')
+
+    {{-- NAVBAR MEMBER --}}
     {{-- @include('partials.navbar_member') --}}
-
-
-    {{-- SLIDER --}}
-    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-        <ol class="carousel-indicators">
-            <li data-target="" data-slide-to="0" class="active"></li>
-            <li data-target="" data-slide-to="1"></li>
-            <li data-target="" data-slide-to="2"></li>
-        </ol>
-        <div class="carousel-inner">
-            <div class="carousel-item active">
-                <div class="pickgradient w-100" style="height:80vh; overflow: hidden;">
-                    <img class="d-block w-100 image1"
-                        src="https://i.pinimg.com/564x/07/75/e7/0775e73e023c40d84bbf30f481bfa14b.jpg" alt="First slide">
-                </div>
-            </div>
-            <div class="carousel-item">
-                <div class="pickgradient w-100" style="height:80vh; overflow: hidden;">
-                    <img class="d-block w-100 image1"
-                        src="https://i.pinimg.com/564x/18/99/fc/1899fc523089403343d83dbf8c0f9f92.jpg" alt="First slide">
-                </div>
-            </div>
-            <div class="carousel-item">
-                <div class="pickgradient w-100" style="height:80vh; overflow: hidden;">
-                    <img class="d-block w-100 image1"
-                        src="https://i.pinimg.com/564x/18/99/fc/1899fc523089403343d83dbf8c0f9f92.jpg" alt="First slide">
-                </div>
-            </div>
-            <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="sr-only">Previous</span>
-            </a>
-            <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="sr-only">Next</span>
-            </a>
-        </div>
-    </div>
 
     <div>
         @yield('homepage')
