@@ -70,4 +70,20 @@ class UserController extends Controller
         Auth::logout();
         return redirect('/login');
     }
+
+    public function viewProfilePage(){
+        return view('profile');
+    }
+
+    public function editProfile(Request $request){
+        $user_id = Auth::user()->id;
+        $currUser = User::find($user_id);
+
+        $currUser->name = $request->name;
+        $currUser->phone_number = $request->phone_number;
+        $currUser->address = $request->address;
+        $currUser->save();
+
+        return redirect('/profile');
+    }
 }
