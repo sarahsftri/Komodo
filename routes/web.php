@@ -20,8 +20,6 @@ Route::get('/', function () {
 
 Route::get('/login', [UserController::class, 'viewLoginPage']);
 Route::post('/login', [UserController::class, 'login']);
-
 Route::get('/register', [UserController::class, 'viewRegisterPage']);
 Route::post('/register', [UserController::class, 'register']);
-
 Route::get('/logout', [UserController::class, 'logout']);
