@@ -21,7 +21,7 @@ Route::get('/', function () {
 });
 
 Route::get('/profile', function () {
-    return view('registered.member');
+    return view('registered.profile');
 });
 
 

@@ -10,9 +10,11 @@
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <link rel="stylesheet" href="{{ asset('assets/css/style.css') }}">
     @include('partials.bootstrap')
+
 </head>
 
 <body>
+    @yield('extra-css')
     {{-- NAVBAR GUEST --}}
     @include('partials.navbar_guest')
 
@@ -66,5 +68,6 @@
         </div>
         <!-- Copyright -->
     </footer>
+
 </body>
 </html>
