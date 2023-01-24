@@ -57,5 +57,14 @@ class MerchandiseSeeder extends Seeder
             'stock' => 150,
             'image' => "https://ih1.redbubble.net/image.651703652.5608/paperpc,750x,w,f8f8f8-pad,1000x1000,f8f8f8.u2.jpg"
         ]);
+        
+        DB:: table('merchandises')->insert([
+            'id' => 6,
+            'name' => "Komodo Coffee Mug",
+            'price' => 60000,
+            'detail' => "Holds 11 oz. (325 ml), Dishwasher-safe ceramic",
+            'stock' => 300,
+            'image' => "https://rlv.zcache.com/realistic_komodo_dragon_monitor_lizard_coffee_mug-r2f0eeaf6be724aaab22a0aba689e6d7f_x7jg5_8byvr_736.webp"
+        ]);
     }
 }
