@@ -48,5 +48,14 @@ class MerchandiseSeeder extends Seeder
             'stock' => 400,
             'image' => "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSasEYnv8hLLMggAleOplaV9GDlVEV1i3bT8a-6bhCCWDiTHSGEcyu27rVw8UCiW-lf38o&usqp=CAU"
         ]);
+        
+        DB:: table('merchandises')->insert([
+            'id' => 5,
+            'name' => "Komodo Post Card",
+            'price' => 20000,
+            'detail' => "Unique artwork, Digitally printed cards on heavyweight stock",
+            'stock' => 150,
+            'image' => "https://ih1.redbubble.net/image.651703652.5608/paperpc,750x,w,f8f8f8-pad,1000x1000,f8f8f8.u2.jpg"
+        ]);
     }
 }
