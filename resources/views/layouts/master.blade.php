@@ -23,6 +23,7 @@
 
     <div>
         @yield('homepage')
+        @yield('content')
     </div>
 
     {{-- FOOTER --}}

@@ -24,7 +24,7 @@
         </ul>
         <ul class="navbar-nav ml-auto">
             <li class="nav-item">
-                <a class="btn btn-primary" href="#" role="button">Login</a>
+                <a class="btn btn-primary" href="/login" role="button">Login</a>
             </li>
 
             <li class="nav-item">
