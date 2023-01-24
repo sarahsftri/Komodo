@@ -25,3 +25,5 @@ Route::post('/register', [UserController::class, 'register']);
 Route::get('/logout', [UserController::class, 'logout']);
 Route::get('/profile', [UserController::class, 'viewProfilePage'])->middleware('admin', 'member');
 Route::patch('/edit-profile', [UserController::class, 'editProfile'])->middleware('admin', 'member');
+
+Route::get('/');
