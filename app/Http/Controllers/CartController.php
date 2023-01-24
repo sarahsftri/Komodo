@@ -30,5 +30,14 @@ class CartController extends Controller
         return redirect('/cart');
     }
 
-    // set quantity?
+    public function setQuantity(Request $request, $merchandise_id){
+        $user_id = Auth::user()->id;
+
+        $currCart = Cart::where('user_id', 'LIKE', "$user_id")->where('merchandise_id', 'LIKE', "$merchandise_id")->get();
+
+        $currCart->quantity = $request->quantity;
+        $currCart->save();
+
+        return redirect('/cart');
+    }
 }
