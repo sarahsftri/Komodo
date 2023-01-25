@@ -65,8 +65,8 @@ class MerchandiseController extends Controller
     }
 
     public function viewMerchandisePage(){
-        $latest = Merchandise::orderBy('created_at', 'DESC')->get();
-        $merch = Merchandise::paginate(8);
+        $latest = Merchandise::orderBy('created_at', 'DESC')->paginate(5);
+        $merch = Merchandise::paginate(5);
 
         return view('layouts.merchandise')->with('latest', $latest)->with('merch', $merch);
     }

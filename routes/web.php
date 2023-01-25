@@ -36,7 +36,7 @@ Route::get('/ticket', [TicketController::class, 'viewTicketPage'])->middleware('
 Route::post('/ticket', [TicketController::class, 'purchaseTickets'])->middleware('member');
 
 
-// Route::get('/merchandise', [MerchandiseController::class, 'viewMerchandisePage']);
+Route::get('/merchandise', [MerchandiseController::class, 'viewMerchandisePage']);
 Route::post('/merchandise/{merchandise_id}', [MerchandiseController::class, 'addToCart'])->middleware('member');
 Route::get('/insert-merchandise', [MerchandiseController::class, 'insertMerchPage'])->middleware('admin');
 Route::post('/insert-merchandise', [MerchandiseController::class, 'insertMerchandise'])->middleware('admin');
@@ -49,10 +49,6 @@ Route::get('/history', [HistoryController::class, 'viewHistoryPage'])->middlewar
 Route::get('/cart', [CartController::class, 'viewCartPage'])->middleware('member');
 
 Route::get('/donation', [DonationController::class, 'viewDonationPage'])->middleware('member');
-
-Route::get('/merchandise', function () {
-    return view('layouts.merchandise');
-});
 
 Route::get('/profile', function () {
     return view('registered.profile');
