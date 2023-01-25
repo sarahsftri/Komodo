@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Ticket extends Model
 {
-    protected $fillable = ['price'];
+    protected $fillable = [];
 
     public function ticket_histories(){
         $this->belongsToMany(History::class, "ticket__histories", "ticket_id", "history_id");
