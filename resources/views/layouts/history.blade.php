@@ -35,13 +35,13 @@
         <h2>Merchandise</h2>
         <table class="table">
             <thead class="thead-light">
-              <tr>
-                <th scope="col">#</th>
-                <th scope="col">Date</th>
-                <th scope="col"> Name</th>
-                <th scope="col"> Qty</th>
-                <th scope="col">Total (IDR)</th>
-              </tr>
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Date</th>
+                    <th scope="col"> Name</th>
+                    <th scope="col"> Qty</th>
+                    <th scope="col">Total (IDR)</th>
+                </tr>
             </thead>
             <tbody>
                 @foreach ($history as $hist)
