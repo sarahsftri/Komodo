@@ -34,7 +34,7 @@
             <div class="row gx-4 gx-lg-5 row-cols-2 row-cols-md-3 row-cols-xl-4 justify-content-center">
                 @foreach ($latest as $new)
                 <div class="col mb-5">
-                    <div class="card h-100">
+                    <div class="card h-100" onclick="window.location='/view-merchandise/{{$new->id}}'">
                         <img class="card-img-top" src="{{url($new->image)}}" alt="..." />
                         <div class="card-body p-4">
                             <div class="text-center">
@@ -64,7 +64,7 @@
             <div class="row gx-4 gx-lg-5 row-cols-2 row-cols-md-3 row-cols-xl-4 justify-content-center">
                 @foreach ($merch as $item)
                 <div class="col mb-5">
-                    <div class="card h-100">
+                    <div class="card h-100" onclick="window.location='/view-merchandise/{{$item->id}}'">
                         <img class="card-img-top" src="{{url($item->image)}}" alt="..." />
                         <div class="card-body p-4">
                             <div class="text-center">

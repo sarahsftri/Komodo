@@ -36,6 +36,7 @@ Route::post('/ticket', [TicketController::class, 'purchaseTickets'])->middleware
 
 Route::get('/merchandise', [MerchandiseController::class, 'viewMerchandisePage']);
 Route::post('/merchandise/{merchandise_id}', [MerchandiseController::class, 'addToCart'])->middleware('member');
+Route::post('/view-merchandise/{merchandise_id}', [MerchandiseController::class, 'viewMerchandise'])->middleware('admin', 'member');
 Route::get('/insert-merchandise', [MerchandiseController::class, 'insertMerchPage'])->middleware('admin');
 Route::post('/insert-merchandise', [MerchandiseController::class, 'insertMerchandise'])->middleware('admin');
 Route::get('/update-merchandise/{merchandise_id}', [MerchandiseController::class, 'updateMerchPage'])->middleware('admin');
