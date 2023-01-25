@@ -49,7 +49,7 @@
             </li>
             @else
             <li class="nav-item">
-                <a class="nav-link">Welcome, User</a>
+                <a class="nav-link">Welcome,@if(!Auth::check() || Auth::user()->role != 'admin') User @else Admin @endif</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="/logout">Logout</a>
