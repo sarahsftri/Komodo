@@ -13,6 +13,7 @@
                 <th scope="col">Date</th>
                 <th scope="col"> Qty</th>
                 <th scope="col">Total (IDR)</th>
+                <th scope="col">Detail</th>
               </tr>
             </thead>
             <tbody>
@@ -23,6 +24,7 @@
                         <td><p>{{$hist->created_at->format('d-m-Y')}}</p></td>
                         <td><p>{{$hist->total_quantity}}</p></td>
                         <td> <p style="color: green;">{{$hist->total_price}}</p></td>
+                        <td><a href="/view-history/{{$hist->id}}">...</a></td>
                       </tr>
                     @endif
                 @endforeach
@@ -41,6 +43,7 @@
                     <th scope="col"> Name</th>
                     <th scope="col"> Qty</th>
                     <th scope="col">Total (IDR)</th>
+                    <th scope="col">Detail</th>
                 </tr>
             </thead>
             <tbody>
@@ -52,6 +55,7 @@
                         <td><p>{{$hist->merchandise_histories[0]->name}}</p></td>
                         <td><p>{{$hist->total_quantity}}</p></td>
                         <td> <p style="color: green;">{{$hist->total_price}}</p></td>
+                        <td><a href="/view-history/{{$hist->id}}">...</a></td>
                       </tr>
                     @endif
                 @endforeach
