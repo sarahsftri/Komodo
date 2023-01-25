@@ -44,9 +44,10 @@
                         </div>
                         <!-- Product actions-->
                         <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                            <div class="text-center">
-                                <a class="btn btn-outline-dark mt-auto" method="POST" href="/add-to-cart/{{$new->id}}">Add to Cart</a>
-                            </div>
+                            <form class="text-center" method="POST" action="/add-to-cart/{{$new->id}}">
+                                @csrf
+                                <button type="submit" class="btn btn-outline-dark mt-auto">Add to Cart</button>
+                            </form>
                         </div>
                     </div>
                 </div>
