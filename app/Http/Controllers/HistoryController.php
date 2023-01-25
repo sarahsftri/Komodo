@@ -51,7 +51,7 @@ class HistoryController extends Controller
         $history = History::create([ // default quantity = 1 for donations
             'user_id' => $user_id,
             'type' => $type,
-            'quantity' => 1,
+            'total_quantity' => 1,
             'total_price' => $amount,
         ]);
 
