@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Cart extends Model
 {
-    protected $fillable = ['user_id', 'merchandise_id'];
+    protected $fillable = ['user_id', 'merchandise_id', 'quantity'];
 
     public function user(){
         return $this->belongsTo(User::class, "user_id", "id");
