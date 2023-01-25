@@ -70,7 +70,7 @@
                 </div>
             </div>
             <div class="card information">
-                <label for="card" class="fs-5">Card Infromation</label>
+                <label for="card" class="fs-5">Card Information</label>
                 <input type="text" class="form-control" id="cardId" name="cardId" placeholder="CC Number">
                 <input type="text" class="form-control" id="expDate" name="expDate" placeholder="Expired Date">
                 <input type="text" class="form-control" id="secCode" name="secCode" placeholder="Security Code">
