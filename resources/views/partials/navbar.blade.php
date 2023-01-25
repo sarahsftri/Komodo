@@ -33,9 +33,6 @@
             <li class="nav-item">
                 <a class="nav-link text-white" href="/profile">Profile</a>
             </li>
-            <li class="nav-item">
-                <a class="nav-link text-white" href="/settings">Settings</a>
-            </li>
         </ul>
 
         <ul class="navbar-nav ml-auto">
@@ -49,10 +46,10 @@
             </li>
             @else
             <li class="nav-item">
-                <a class="nav-link">Welcome,@if(!Auth::check() || Auth::user()->role != 'admin') User @else Admin @endif</a>
+                <a class="nav-link text-white">Welcome,@if(!Auth::check() || Auth::user()->role != 'admin') User @else Admin @endif</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="/logout">Logout</a>
+                <a class="btn btn-primary" style="background-color: #98BA80" href="/logout">Logout</a>
             </li>
             @endif
         </ul>
