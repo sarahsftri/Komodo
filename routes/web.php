@@ -43,6 +43,11 @@ Route::post('/merchandise/{merchandise_id}', [MerchandiseController::class, 'add
 // Route::patch('/update-merchandise/{merchandise_id}', [MerchandiseController::class, 'updateMerchandise'])->middleware('admin');
 // Route::delete('/delete-merchandise/{merchandise_id}', [MerchandiseController::class, 'removeMerchandise'])->middleware('admin');
 
-Route::get('/cart', [CartController::class, 'viewCartPage'])->middleware('member');
+// Route::get('/cart', [CartController::class, 'viewCartPage'])->middleware('member');
 
 Route::get('/donation', [DonationController::class, 'viewDonationPage'])->middleware('member');
+
+Route::get('/cart', function () {
+    return view('registered.cart');
+});
+
