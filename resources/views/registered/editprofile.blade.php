@@ -9,12 +9,59 @@
         <div class="row">
             <div class="col-md-5 border-right">
                 <div class="d-flex flex-column align-items-center text-center p-3 py-5">
+
+
+
+
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-4 text-center">
+                                <div class="profile-picture">
+                                    <img src="path/to/default-picture.jpg" alt="Profile Picture"
+                                        class="img-fluid rounded-circle">
+                                    {{-- <form>
+                                        <div class="form-group">
+                                            <label for="profile-picture-input" class="btn btn-primary btn-sm">
+                                                Update Picture
+                                            </label>
+                                            <input type="file" class="form-control-file d-none"
+                                                id="profile-picture-input">
+                                        </div>
+                                    </form> --}}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+
+
+
+
+
+
+
+
+
                     <img class="mt-5" style="  width: 250px;
                     height: 250px; border-radius: 10px;"
                         src="https://i.pinimg.com/564x/18/b5/b5/18b5b599bb873285bd4def283c0d3c09.jpg">
 
+                        <form style="margin-top: 8%; padding: 0;">
+                            <div class="form-group" >
 
-                    <div class="col-md-8" style="margin: 8%;">
+                                <label for="profile-picture-input" class="btn btn-primary btn-sm" >
+                                    Update Picture
+                                </label>
+
+                                <input type="file" class="form-control-file d-none"
+                                    id="profile-picture-input">
+                            </div>
+                        </form>
+
+
+                    <div class="col-md-8" style="margin: 3%;">
                         <div class="form-group-1">
 
                             <label class="labels" for="update-name" style="float: left;">New Username
@@ -80,4 +127,18 @@
             </div>
         </div>
     </div>
+
+
+    <script>
+        document.querySelector('#profile-picture-input').addEventListener('change', (e) => {
+            const file = e.target.files[0];
+            const reader = new FileReader();
+
+            reader.onload = (event) => {
+                document.querySelector('.profile-picture img').src = event.target.result;
+            }
+
+            reader.readAsDataURL(file);
+        });
+    </script>
 @endsection
