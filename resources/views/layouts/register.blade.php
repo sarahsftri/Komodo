@@ -8,7 +8,9 @@
         <h3 text-align="center">Register</h3><br>
 
         @auth
+        <div class="mb-5 pb-3">
             Your account is already registered. Go to the <a href="/">Main Page</a>.
+        </div>
         @else
             <form action="/register" method="POST">
                 @csrf
