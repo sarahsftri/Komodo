@@ -13,7 +13,7 @@
                 <a class="nav-link" href="/donation">Donation</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#">Ticket</a>
+                <a class="nav-link" href="/ticket">Ticket</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="#">Merchendise</a>

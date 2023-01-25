@@ -8,7 +8,7 @@ use App\Models\Ticket;
 class TicketController extends Controller
 {
     public function viewTicketPage(){
-        return view('ticket');
+        return view('layouts.ticket');
     }
 
     public function purchaseTickets(Request $request){

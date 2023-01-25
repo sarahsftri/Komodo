@@ -16,9 +16,13 @@
         <form action="/register" method="POST">
             @csrf
             <div class="form-group">
-                <label>Amount</label>
-                <input type="amount" name="amount" class="form-control" placeholder="Enter amount donation">
-                @error('amount')
+                <h3 text-align="center">What You’ll Experience</h3><br>
+                <p>
+                    Break free from your hectic routine by visiting Komodo Island. enjoy a holiday that will take you to explore Komodo Island and Pink Beach. You will be spoiled with charming views along the way from Komodo Island to Pink Beach. At Pink Beach, you can do snorkeling to see the natural beauty under the water. Most importantly, make sure your camera is ready to capture every special moment spent there!
+                </p>
+                <label>Quantity</label>
+                <input type="quantity" name="quantity" class="form-control" placeholder="Enter amount donation">
+                @error('quantity')
                     <p class="text-danger">{{ $message }}</p>
                 @enderror
             </div>
