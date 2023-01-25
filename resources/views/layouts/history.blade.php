@@ -13,7 +13,7 @@
         </div>
         <div class="item-detail mt-3">
             <h5>
-                Ticket ID: {{$hist->ticket->id}}
+                Ticket ID: {{$hist->ticket_histories[0]->id}}
             </h5>
 
             <p>Quantity: {{$hist->quantity}}</p>

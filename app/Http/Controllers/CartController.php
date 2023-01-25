@@ -30,9 +30,8 @@ class CartController extends Controller
     }
 
     public function removeFromCart($merchandise_id){
-        $remove = Cart::where('merchandise_id', 'LIKE', '$merchandise_id')->get();
-
-        $remove->delete();
+        $user_id = Auth::user()->id;
+        Cart::where('merchandise_id', 'LIKE', "$merchandise_id")->where('user_id', 'LIKE', "$user_id")->delete();
 
         return redirect('/cart');
     }
@@ -60,7 +59,7 @@ class CartController extends Controller
         return redirect('/cart');
     }
 
-    public function checkOut(){ //check out all item in cart
+    public function checkOut(){
         $user_id = Auth::user()->id;
         $cart = Cart::where('user_id', 'LIKE', "$user_id")->get();
         $quantity = 0;
@@ -78,5 +77,13 @@ class CartController extends Controller
         }
 
         $cart->delete();
+    }
+
+    public static function getCartCount(){
+        $user_id = Auth::user()->id;
+        $cart = Cart::where('user_id', 'LIKE', "$user_id")->get();
+        $cart_quantity = count($cart);
+
+        return $cart_quantity;
     }
 }

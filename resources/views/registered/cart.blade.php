@@ -17,11 +17,15 @@
             <div class="items d-flex flex-column gap-3" style="justify-self: self-start">
                 <div class="item d-flex flex-row align-items-center">
                     <div class="card card-body d-flex flex-row align-items-center gap-3">
-                        <img src="https://i.pinimg.com/564x/0b/10/52/0b105243af5ce8a7dd5a5de92c4c5c81.jpg"
+                        <img src="{{url($item->merchandise->image)}}"
                              alt="item-image" width="50" height="50">
                         <p class="p-0 m-0 fs-5">{{$item->merchandise->name}}</p>
                     </div>
-                    <a href="/" class="btn p-4 fw-bold m-0"><span class="material-symbols-outlined fs-4">close</span></a>
+                    <form method="POST" action="/remove-from-cart/{{$item->merchandise->id}}">
+                        @csrf
+                        @method('DELETE')
+                        <button type="submit" class="btn p-4 fw-bold m-0"><span class="material-symbols-outlined fs-4">close</span></button>
+                    </form>
                 </div>
             </div>
             @endforeach
@@ -32,7 +36,8 @@
                 </div>
             </div>
         </div>
-        <form class="right-container p-5 gap-3 d-flex flex-column justify-content-between" action="">
+        <form class="right-container p-5 gap-3 d-flex flex-column justify-content-between" action="/check-out" method="POST">
+            @csrf
             <h3>| Summary</h3>
             <div class="payment">
                 <h5>Payment Method</h5>
@@ -65,7 +70,7 @@
                 <label for="address" class="fs-5">Shipping</label>
                 <textarea class="form-control" id="address" name="address" placeholder="Input your address" rows="3"></textarea>
             </div>
-            <a href="#" class="btn btn-outline-dark">Checkout</a>
+            <button type="submit" class="btn btn-outline-dark">Checkout</button>
         </form>
     </div>
 @endsection

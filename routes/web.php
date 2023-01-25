@@ -21,7 +21,6 @@ use App\Http\Controllers\HistoryController;
 
 Route::get('/', function () {
     return view('layouts.homepage');
-    // return view('partials.navbar_member');
 });
 
 Route::get('/login', [UserController::class, 'viewLoginPage']);
@@ -34,7 +33,6 @@ Route::get('/profile', [UserController::class, 'viewProfilePage'])->middleware('
 
 Route::get('/ticket', [TicketController::class, 'viewTicketPage'])->middleware('member');
 Route::post('/ticket', [TicketController::class, 'purchaseTickets'])->middleware('member');
-
 
 Route::get('/merchandise', [MerchandiseController::class, 'viewMerchandisePage']);
 Route::post('/merchandise/{merchandise_id}', [MerchandiseController::class, 'addToCart'])->middleware('member');
@@ -49,8 +47,10 @@ Route::delete('/remove-from-cart/{merchandise_id}', [CartController::class, 'rem
 Route::get('/history', [HistoryController::class, 'viewHistoryPage'])->middleware('member');
 
 Route::get('/cart', [CartController::class, 'viewCartPage'])->middleware('member');
+Route::post('/check-out', [CartController::class, 'CartController@checkOut'])->middleware('member');
 
 Route::get('/donation', [DonationController::class, 'viewDonationPage'])->middleware('member');
+Route::post('/donation', [DonationController::class, 'makeDonation'])->middleware('member');
 
 Route::get('/profile', function () {
     return view('registered.profile');

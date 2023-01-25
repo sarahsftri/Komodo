@@ -11,7 +11,7 @@ class HistoryController extends Controller
     public function viewHistoryPage(){
         $user_id = Auth::user()->id;
 
-        $history = History::where('user_id', 'LIKE', "$user_id");
+        $history = History::where('user_id', 'LIKE', "$user_id")->get();
 
         return view('layouts.history')->with('history', $history);
     }
@@ -44,14 +44,15 @@ class HistoryController extends Controller
         return $history->id;
     }
 
-    public static function createDonationHistory($ammount){
+    public static function createDonationHistory($amount){
         $user_id = Auth::user()->id;
         $type = "Donation";
 
-        $history = History::create([
+        $history = History::create([ // default quantity = 1 for donations
             'user_id' => $user_id,
             'type' => $type,
-            'total ammount' => $ammount,
+            'total_quantity' => 1,
+            'total_price' => $amount,
         ]);
 
         return $history->id;

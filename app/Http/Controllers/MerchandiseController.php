@@ -67,8 +67,9 @@ class MerchandiseController extends Controller
     public function viewMerchandisePage(){
         $latest = Merchandise::orderBy('created_at', 'DESC')->paginate(5);
         $merch = Merchandise::paginate(5);
+        $cart_quantity = CartController::getCartCount();
 
-        return view('layouts.merchandise')->with('latest', $latest)->with('merch', $merch);
+        return view('layouts.merchandise')->with('latest', $latest)->with('merch', $merch)->with('cart_quantity', $cart_quantity);
     }
 
     public function addToCart($merchandise_id){

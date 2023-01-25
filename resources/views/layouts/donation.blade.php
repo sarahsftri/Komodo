@@ -14,7 +14,7 @@
         </div>
       </div>
       <div class="col" style="margin: 50px">
-        <form action="/register" method="POST">
+        <form action="/donation" method="POST">
             @csrf
             <div class="form-group">
                 <h3 text-align="center">Make a Donation</h3><br>
