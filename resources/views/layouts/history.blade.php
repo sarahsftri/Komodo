@@ -5,7 +5,8 @@
 <body style="background-color: #BFC5A2">
     <br>
     <div class="container" style = "background-color: #FFFFFF; border-radius: 25px;">
-        @foreach ( as )
+        <h2>Ticket</h2>
+        @foreach ($apa as $apas)
         <div class="item-image">
             <img src="{{asset('#')}}">
         </div>
