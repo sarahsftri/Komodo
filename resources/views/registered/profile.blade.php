@@ -15,8 +15,8 @@
                     height: 250px; border-radius: 10px; margin: 40px;"
                         src="https://i.pinimg.com/564x/18/b5/b5/18b5b599bb873285bd4def283c0d3c09.jpg" id="output">
 
-                    <span class="name-tag font-weight-bold">Diva Angelika</span>
-                    <span class="name-tag text-black-50">diva@mail.com</span>
+                    <span class="name-tag font-weight-bold">@if($user->name == null) - @else {{$user->name}} @endif</span>
+                    <span class="name-tag text-black-50">{{$user->email}}</span>
 
                     {{-- <button class="btn btn-primary profile-button-save" style="float: left;" type="button">
                         <a href="/profile" style="text-decoration: none; color: white">
@@ -37,28 +37,19 @@
                     <div class="row mt-3">
 
                         <div class="col-md-12">
-                            <label class="labels">Mobile Number</label>
-                            <input type="text" class="form-control" placeholder="not updated yet" value=""
-                                readonly>
+                            <label class="labels">Name</label>
+                            <input type="text" class="form-control" name="name" placeholder="not updated yet" value="{{$user->name}}" readonly>
                         </div>
 
 
                         <div class="col-md-12">
-                            <label class="labels">State</label>
-                            <input type="text" class="form-control" placeholder="not updated yet" value=""
-                                readonly>
-                        </div>
-
-                        <div class="col-md-12">
-                            <label class="labels">Country</label>
-                            <input type="text" class="form-control" placeholder="not updated yet" value=""
-                                readonly>
+                            <label class="labels">Phone Number</label>
+                            <input type="text" class="form-control" name="phone_number" placeholder="not updated yet" value="{{$user->phone_number}}" readonly>
                         </div>
 
                         <div class="col-md-12">
                             <label class="labels">Address</label>
-                            <input type="text" class="form-control" placeholder="not updated yet" value=""
-                                readonly>
+                            <input type="text" class="form-control" name="address" placeholder="not updated yet" value="{{$user->address}}" readonly>
                         </div>
 
                         <div class="mt-5 text-center">

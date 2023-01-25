@@ -57,7 +57,3 @@ Route::post('/check-out', [CartController::class, 'checkOut'])->middleware('memb
 
 Route::get('/donation', [DonationController::class, 'viewDonationPage'])->middleware('member');
 Route::post('/donation', [DonationController::class, 'makeDonation'])->middleware('member');
-
-Route::get('/profile', function () {
-    return view('registered.profile');
-});
