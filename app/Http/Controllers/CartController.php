@@ -23,10 +23,16 @@ class CartController extends Controller
 
     public static function addMerchToCart($merchandise_id){
         $user_id = Auth::user()->id;
-        Cart::create([
-            'user_id' => $user_id,
-            'merchandise_id' => $merchandise_id
-        ]);
+        $currItem = Cart::where('user_id', 'LIKE', "$user_id")->where('merchandise_id', 'LIKE', "$merchandise_id")->get();
+        if($currItem == null){
+            Cart::create([
+                'user_id' => $user_id,
+                'merchandise_id' => $merchandise_id
+            ]);
+        }else{
+            $currItem->quantity += 1;
+            $currItem->save();
+        }
     }
 
     public function removeFromCart($merchandise_id){
