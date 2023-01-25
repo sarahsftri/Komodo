@@ -9,12 +9,10 @@
     <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav">
             <li class="nav-item">
-                <a class="nav-link" href="#">Home</a>
+                <a class="nav-link" href="/">Home</a>
             </li>
-            {{-- khusus member --}}
-            @if(!Auth::check() || Auth::user()->role != 'member')
-            {{-- sengaja kosong --}}
-            @elseif(Auth::user()->role == 'member')
+            {{-- @if(!Auth::check() || Auth::user()->role != 'member')
+            @elseif(Auth::user()->role == 'member') --}}
             <li class="nav-item">
                 <a class="nav-link" href="/donation">Donation</a>
             </li>
@@ -22,17 +20,17 @@
                 <a class="nav-link" href="/ticket">Ticket</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#">Merchandise</a>
+                <a class="nav-link" href="/merchandise">Merchandise</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#">History</a>
+                <a class="nav-link" href="/history">History</a>
             </li>
-            @endif
+            {{-- @endif --}}
             <li class="nav-item">
-                <a class="nav-link" href="#">Profile</a>
+                <a class="nav-link" href="/profile">Profile</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#">Settings</a>
+                <a class="nav-link" href="/settings">Settings</a>
             </li>
         </ul>
         <ul class="navbar-nav ml-auto">

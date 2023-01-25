@@ -28,7 +28,7 @@
                         <p class="text-danger">{{ $errors->first('credentials') }}</p>
                     @endif
                 </div>
-                <div style="display:flex; flex-direction:row">
+                <div style="display: flex; flex-direction: row">
                     <input style="width: 1em" type="checkbox" name="remember" id="remember" checked={{Cookie::get('email-cookie')!=null}}>
                     <label>Remember me</label>
                     <br>
