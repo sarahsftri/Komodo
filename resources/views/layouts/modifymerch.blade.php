@@ -43,7 +43,7 @@
             @enderror
             <br>
             <label>Stock</label>
-            <input class="form-control text-black bg-light" type="text" name="stock" @yield('value-price')/>
+            <input class="form-control text-black bg-light" type="text" name="stock" @yield('value-stock')/>
             @error('stock')
                 <p class="text-danger">{{ $message }}</p>
             @enderror
