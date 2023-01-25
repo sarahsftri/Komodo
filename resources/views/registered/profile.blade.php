@@ -22,20 +22,9 @@
             <div class="col">
                 <div class="p-3 py-5">
                     <div class="d-flex justify-content-between align-items-center mb-3">
-                        <h4 class="text-right">Profile Settings</h4>
+                        <h4 class="text-right">Your Profile</h4>
                     </div>
                     <div class="row mt-2">
-                        {{-- <div class="col-md-6">
-                            <label class="labels">Name</label>
-                            <div class="member-name">
-                                <h4>Diva</h4>
-                            </div>
-                            {{-- <input type="" class="form-control" value="Diva">
-                        </div>
-                        <div class="col-md-6"><label class="labels">Surname</label>
-                            {{-- <input type="text"
-                                class="form-control" value="" >
-                        </div>--}}
                     </div>
                     <div class="row mt-3">
 
@@ -66,7 +55,11 @@
                         </div>
 
                         <div class="mt-5 text-center" >
-                            <button class="btn btn-primary profile-button" style="float: right;" type="button">Save Profile</button>
+                            <button class="btn btn-primary profile-button-save" style="float: right;" type="button">Save Profile</button>
+
+                            <button class="btn btn-outline-success profile-button-edit" style="float: left;" type="button">
+                                <a href="/editprofile" style="text-decoration: none; color: green">Edit Profile</a>
+                            </button>
                         </div>
 
                     </div>

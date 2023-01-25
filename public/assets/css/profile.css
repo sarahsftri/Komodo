@@ -1,15 +1,20 @@
 body {
-    background: #4A5E55;
+    background: #BFC5A2;
 }
 
-.profile-button {
+.profile-button-save{
     background: #9098B0;
     box-shadow: none;
     border: none
 }
 
-.profile-button:hover {
-    background: #4A5E55
+.profile-button-save:hover {
+    background-color: #4A5E55;
+}
+
+.profile-button-edit:hover {
+    background-color: #4A5E55;
+    /* color: black; */
 }
 
 .labels {

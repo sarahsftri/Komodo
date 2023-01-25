@@ -61,3 +61,7 @@ Route::get('/merchandise', function () {
 Route::get('/profile', function () {
     return view('registered.profile');
 });
+
+Route::get('/editprofile', function () {
+    return view('registered.editprofile');
+});

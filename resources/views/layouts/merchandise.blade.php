@@ -21,7 +21,7 @@
         </div>
     </nav>
 
-    <!-- Section-->
+    <!-- SECTION 1-->
     <section class="py-5">
         <div class="container px-4 px-lg-5 mt-5">
             <div>
@@ -162,7 +162,6 @@
     </section>
 
     {{-- SECTION 2 --}}
-
 
     <section class="py-2">
         <div class="container px-4 px-lg-5">
