@@ -11,7 +11,7 @@ class HistoryController extends Controller
     public function viewHistoryPage(){
         $user_id = Auth::user()->id;
 
-        $history = History::where('user_id', 'LIKE', "$user_id");
+        $history = History::where('user_id', 'LIKE', "$user_id")->get();
 
         return view('layouts.history')->with('history', $history);
     }
