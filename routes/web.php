@@ -43,6 +43,7 @@ Route::post('/insert-merchandise', [MerchandiseController::class, 'insertMerchan
 Route::get('/update-merchandise/{merchandise_id}', [MerchandiseController::class, 'updateMerchPage'])->middleware('admin');
 Route::patch('/update-merchandise/{merchandise_id}', [MerchandiseController::class, 'updateMerchandise'])->middleware('admin');
 Route::delete('/delete-merchandise/{merchandise_id}', [MerchandiseController::class, 'removeMerchandise'])->middleware('admin');
+Route::post('/add-to-cart/{merchandise_id}', [MerchandiseController::class, 'addToCart'])->middleware('member');
 
 Route::get('/history', [HistoryController::class, 'viewHistoryPage'])->middleware('member');
 
