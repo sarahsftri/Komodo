@@ -21,7 +21,11 @@
                              alt="item-image" width="50" height="50">
                         <p class="p-0 m-0 fs-5">{{$item->merchandise->name}}</p>
                     </div>
-                    <a href="/" class="btn p-4 fw-bold m-0"><span class="material-symbols-outlined fs-4">close</span></a>
+                    <form method="POST" action="/remove-from-cart/{{$item->merchandise->id}}">
+                        @csrf
+                        @method('DELETE')
+                        <button type="submit" class="btn p-4 fw-bold m-0"><span class="material-symbols-outlined fs-4">close</span></button>
+                    </form>
                 </div>
             </div>
             @endforeach
