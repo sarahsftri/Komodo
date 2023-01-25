@@ -55,7 +55,23 @@ class CartController extends Controller
         return redirect('/cart');
     }
 
-    public function checkOut(){
+    public function checkOut(){ //check out all item in cart
+        $user_id = Auth::user()->id;
+        $cart = Cart::where('user_id', 'LIKE', "$user_id")->get();
+        $quantity = 0;
+        $price = 0;
 
+        foreach($cart as $item){
+            $quantity += $item->quantity;
+            $price += $item->merchandise->price;
+        }
+
+        $history_id = HistoryController::createMerchHistory($quantity, $price, $user_id);
+
+        foreach($cart as $item){
+            MerchandiseHistoryController::loadMerchHistory($history_id, $item->merchandise_id, $item->quantity);
+        }
+
+        $cart->delete();
     }
 }

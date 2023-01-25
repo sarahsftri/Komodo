@@ -23,5 +23,18 @@ class HistoryController extends Controller
         return $history->id;
     }
 
+    public static function createMerchHistory($quantity, $price, $user_id){
+        $type = "Merchandise";
+
+        $history = History::create([
+            'user_id' => $user_id,
+            'type' => $type,
+            'total_quantity' => $quantity,
+            'total_price' => $price
+        ]);
+
+        return $history->id;
+    }
+
     // show all history
 }

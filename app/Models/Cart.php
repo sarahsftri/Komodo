@@ -14,6 +14,6 @@ class Cart extends Model
     }
 
     public function merchandise(){
-        return $this->belongsTo(Merchandise::class);
+        return $this->belongsTo(Merchandise::class, "merchandise_id", "id");
     }
 }
