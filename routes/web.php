@@ -27,9 +27,11 @@ Route::get('/login', [UserController::class, 'viewLoginPage']);
 Route::post('/login', [UserController::class, 'login']);
 Route::get('/register', [UserController::class, 'viewRegisterPage']);
 Route::post('/register', [UserController::class, 'register']);
-Route::get('/logout', [UserController::class, 'logout']);
-Route::get('/profile', [UserController::class, 'viewProfilePage']);
-// Route::patch('/edit-profile', [UserController::class, 'editProfile'])->middleware('admin', 'member');
+Route::get('/logout', [UserController::class, 'logout'])->middleware('account');
+Route::get('/profile', [UserController::class, 'viewProfilePage'])->middleware('account');
+Route::get('/edit-profile', [UserController::class, 'viewEditProfilePage'])->middleware('account');
+Route::patch('/edit-image/{user_id}', [UserController::class, 'editProfilePicture'])->middleware('account');
+Route::patch('/edit-profile/{user_id}', [UserController::class, 'editProfile'])->middleware('account');
 
 Route::get('/ticket', [TicketController::class, 'viewTicketPage'])->middleware('member');
 Route::post('/ticket', [TicketController::class, 'purchaseTickets'])->middleware('member');
@@ -56,11 +58,3 @@ Route::post('/check-out', [CartController::class, 'checkOut'])->middleware('memb
 
 Route::get('/donation', [DonationController::class, 'viewDonationPage'])->middleware('member');
 Route::post('/donation', [DonationController::class, 'makeDonation'])->middleware('member');
-
-Route::get('/profile', function () {
-    return view('registered.profile');
-});
-
-Route::get('/editprofile', function () {
-    return view('registered.editprofile');
-});

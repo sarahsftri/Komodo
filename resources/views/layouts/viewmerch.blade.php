@@ -1,7 +1,7 @@
 @extends("layouts.master")
 
 @section('content')
-
+<br><br><br>
 <body style="background-color: #BFC5A2">
     <br>
     @if (!Auth::check() || Auth::user()->role != 'admin')
@@ -18,8 +18,8 @@
     @endif
     <div class="container mb-5" style = "background-color: #FFFFFF; border-radius: 25px;">
         <div class="col mb-5">
-            <div class="card h-20">
-                <img class="card-img-top" src="{{url($merchandise->image)}}" alt="..." />
+            <div class="card h-100" style="display: flex; justify-content:center; align-items:center">
+                <img class="card-img-top" src="{{url($merchandise->image)}}" alt="..." style="width: 20rem"/>
                 <div class="card-body p-4">
                     <div class="text-center">
                         <h5 class="fw-bolder">{{$merchandise->name}}</h5>
