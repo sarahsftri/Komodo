@@ -19,13 +19,13 @@
             <div class="carousel-item">
                 <div class="pickgradient w-100" style="height:80vh; overflow: hidden;">
                     <img class="d-block w-100 image1"
-                        src="https://i.pinimg.com/564x/18/99/fc/1899fc523089403343d83dbf8c0f9f92.jpg" alt="First slide">
+                        src="{{ url('images\komodo_slide_2.jpg') }}" alt="First slide">
                 </div>
             </div>
             <div class="carousel-item">
                 <div class="pickgradient w-100" style="height:80vh; overflow: hidden;">
                     <img class="d-block w-100 image1"
-                        src="https://i.pinimg.com/564x/18/99/fc/1899fc523089403343d83dbf8c0f9f92.jpg" alt="First slide">
+                        src="{{ url('images\komodo_slide_4.jpg') }}" alt="First slide">
                 </div>
             </div>
             <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
