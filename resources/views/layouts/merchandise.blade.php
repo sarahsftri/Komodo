@@ -5,7 +5,7 @@
 @endsection
 
 @section('content')
-    <!-- Navigation-->
+    @if (!Auth::check() || Auth::user()->role != "admin")
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <div class="container px-4 px-lg-5">
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
@@ -20,9 +20,11 @@
             </button>
         </div>
     </nav>
+    @else
+
+    @endif
 
     <!-- Latest Section-->
-    <!-- SECTION 1-->
     <section class="py-5">
         <div class="container px-4 px-lg-5 mt-5">
             <div>
@@ -32,18 +34,13 @@
                 @foreach ($latest as $new)
                 <div class="col mb-5">
                     <div class="card h-100">
-                        <!-- Product image-->
                         <img class="card-img-top" src="{{url($new->image)}}" alt="..." />
-                        <!-- Product details-->
                         <div class="card-body p-4">
                             <div class="text-center">
-                                <!-- Product name-->
                                 <h5 class="fw-bolder">{{$new->name}}</h5>
-                                <!-- Product price-->
                                 {{$new->price}}
                             </div>
                         </div>
-                        <!-- Product actions-->
                         <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
                             <form class="text-center" method="POST" action="/add-to-cart/{{$new->id}}">
                                 @csrf
@@ -57,9 +54,7 @@
         </div>
     </section>
 
-    {{-- SECTION 2 --}}
-
-
+    {{-- All Merch --}}
     <section class="py-2">
         <div class="container px-4 px-lg-5 mt-5">
             <div>
@@ -69,18 +64,13 @@
                 @foreach ($merch as $item)
                 <div class="col mb-5">
                     <div class="card h-100">
-                        <!-- Product image-->
                         <img class="card-img-top" src="{{url($item->image)}}" alt="..." />
-                        <!-- Product details-->
                         <div class="card-body p-4">
                             <div class="text-center">
-                                <!-- Product name-->
                                 <h5 class="fw-bolder">{{$item->name}}</h5>
-                                <!-- Product price-->
                                 {{$item->price}}
                             </div>
                         </div>
-                        <!-- Product actions-->
                         <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
                             <form class="text-center" method="POST" action="/add-to-cart/{{$item->id}}">
                                 @csrf
