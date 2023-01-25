@@ -13,7 +13,7 @@
         </div>
       </div>
       <div class="col" style="margin: 50px">
-        <form action="/register" method="POST">
+        <form action="/ticket" method="POST">
             @csrf
             <div class="form-group">
                 <h3 text-align="center">What You’ll Experience</h3><br>
