@@ -11,7 +11,7 @@
         <div class="container" style = "background-color: #FFFFFF; border-radius: 25px;">
         @foreach ($history->ticket_histories as $ticket)
             <div class="item-image">
-                <img src="images/ticket.jpg">
+                <img src="images/ticket.jpg" style="width: 20rem"/>
             </div>
             <div class="item-detail mt-3">
                 <h5>
@@ -33,7 +33,7 @@
     <div class="container" style = "background-color: #FFFFFF; border-radius: 25px;">
         @foreach ($history->merchandise_histories as $merchandise)
             <div class="item-image">
-                <img src="{{url($merchandise->image)}}">
+                <img src="{{url($merchandise->image)}}" style="width: 20rem">
             </div>
             <div class="item-detail mt-3">
                 <h5>
