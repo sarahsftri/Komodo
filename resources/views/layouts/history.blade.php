@@ -34,7 +34,7 @@
         </div>
         <div class="item-detail mt-3">
             <h5>
-                {{$hist->merchandise_histories->merchandise[0]->name}}
+                {{$hist->merchandise_histories[0]->name}}
             </h5>
 
             <p>Quantity: {{$hist->quantity}}</p>
