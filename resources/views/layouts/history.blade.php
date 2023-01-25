@@ -9,7 +9,7 @@
         @foreach ($history as $hist)
         @if($hist->type == 'Ticket')
         <div class="item-image">
-            <img src="{{asset('#')}}">
+            <img src="images/ticket.jpeg">
         </div>
         <div class="item-detail mt-3">
             <h5>
@@ -30,7 +30,7 @@
         @foreach ($history as $hist)
         @if($hist->type == 'Merchandise')
         <div class="item-image">
-            <img src="{{asset('#')}}">
+            <img src="{{url($hist->merchandise_histories[0]->image)}}">
         </div>
         <div class="item-detail mt-3">
             <h5>
@@ -51,7 +51,7 @@
         @foreach ($history as $hist)
         @if($hist->type == 'Donation')
         <div class="item-image">
-            <img src="{{asset('#')}}">
+            <img src="images/donation.png">
         </div>
         <div class="item-detail mt-3">
             <p>Amount of Donation: {{$hist->donation->amount}}</p>
