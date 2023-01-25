@@ -77,7 +77,7 @@
                 Know More About
                 <span class="text-success">Komodo</span>!
               </h1>
-              <p class="mb-4">
+              <p class="mb-4" style="text-align: justify;">
                 Komodo dragons, or Komodo monitors, are the largest, heaviest lizards in the world —
                 and one of the few with a venomous bite. These stealthy, powerful hunters rely on their
                 sense of smell to detect food, using their long, forked tongues to sample the air. They
@@ -99,7 +99,7 @@
             </div>
             <div class="col-lg-6">
               <div class="img-border">
-                <img class="img-thumbnail" src="https://i.pinimg.com/564x/70/cf/97/70cf975db4b639d867d476e876cb08ca.jpg" alt="" />
+                <img class="img-thumbnail rounded-circle" src="https://i.pinimg.com/564x/70/cf/97/70cf975db4b639d867d476e876cb08ca.jpg" alt="" />
               </div>
             </div>
           </div>
@@ -300,7 +300,7 @@
           <div class="row g-5">
             <div class="col-lg-6">
                 <div class="img-border">
-                    <img class="img-thumbnail" src="https://arc-anglerfish-arc2-prod-pmn.s3.amazonaws.com/public/D2LTRFIHZZEXTAJ55QIZBWGJEU.jpg" alt="" />
+                    <img class="img-thumbnail rounded-9" src="https://arc-anglerfish-arc2-prod-pmn.s3.amazonaws.com/public/D2LTRFIHZZEXTAJ55QIZBWGJEU.jpg" alt="" />
                 </div>
 
             </div>
