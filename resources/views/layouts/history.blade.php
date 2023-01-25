@@ -19,6 +19,8 @@
             <p>Quantity: {{$hist->quantity}}</p>
 
             <p>Total Price: IDR {{$hist->total_price}}</p>
+
+            <p>Date: {{$hist->date}}</p>
         </div>
         @endif
         @endforeach
@@ -32,12 +34,14 @@
         </div>
         <div class="item-detail mt-3">
             <h5>
-                Ticket ID: {{$hist->ticket->id}}
+                {{$hist->merchandise_histories->merchandise[0]->name}}
             </h5>
 
             <p>Quantity: {{$hist->quantity}}</p>
 
             <p>Total Price: IDR {{$hist->total_price}}</p>
+
+            <p>Date: {{$hist->date}}</p>
         </div>
         @endif
         @endforeach
@@ -50,13 +54,8 @@
             <img src="{{asset('#')}}">
         </div>
         <div class="item-detail mt-3">
-            <h5>
-                Ticket ID: {{$hist->ticket->id}}
-            </h5>
-
-            <p>Quantity: {{$hist->quantity}}</p>
-
-            <p>Total Price: IDR {{$hist->total_price}}</p>
+            <p>Amount of Donation: {{$hist->donation->amount}}</p>
+            <p>Date: {{$hist->date}}</p>
         </div>
         @endif
         @endforeach
