@@ -15,8 +15,7 @@
             <li class="nav-item">
                 <a class="nav-link text-white" href="/">Home</a>
             </li>
-            {{-- @if(!Auth::check() || Auth::user()->role != 'member')
-            @elseif(Auth::user()->role == 'member') --}}
+            @if(!Auth::check() || Auth::user()->role == 'member')
             <li class="nav-item">
                 <a class="nav-link text-white" href="/donation">Donation</a>
             </li>
@@ -29,7 +28,9 @@
             <li class="nav-item">
                 <a class="nav-link text-white" href="/history">History</a>
             </li>
-            {{-- @endif --}}
+            @elseif(Auth::check() && Auth::user()->role == 'admin')
+
+            @endif
             <li class="nav-item">
                 <a class="nav-link text-white" href="/profile">Profile</a>
             </li>
