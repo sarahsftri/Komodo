@@ -47,7 +47,3 @@ Route::delete('/delete-merchandise/{merchandise_id}', [MerchandiseController::cl
 Route::get('/cart', [CartController::class, 'viewCartPage'])->middleware('member');
 
 Route::get('/donation', [DonationController::class, 'viewDonationPage'])->middleware('member');
-
-Route::get('/cart', function () {
-    return view('registered.cart');
-});
