@@ -11,8 +11,9 @@
             <li class="nav-item">
                 <a class="nav-link" href="#">Home</a>
             </li>
+            {{-- khusus member --}}
             @if(!Auth::check() || Auth::user()->role != 'member')
-
+            {{-- sengaja kosong --}}
             @elseif(Auth::user()->role == 'member')
             <li class="nav-item">
                 <a class="nav-link" href="/donation">Donation</a>
