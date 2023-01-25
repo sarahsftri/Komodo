@@ -5,7 +5,7 @@
 <body style="background-color: #BFC5A2">
     <br>
     <div class="container" style = "background-color: #FFFFFF; border-radius: 25px;">
-        <h2>Ticket</h2>
+        <h2 class="py-3">Ticket</h2>
         <table class="table">
             <thead class="thead-light">
               <tr>
@@ -34,7 +34,7 @@
 
     </div>
     <div class="container" style = "background-color: #FFFFFF; border-radius: 25px;">
-        <h2>Merchandise</h2>
+        <h2 class="py-3">Merchandise</h2>
         <table class="table">
             <thead class="thead-light">
                 <tr>
@@ -65,7 +65,7 @@
 
     </div>
     <div class="container" style = "background-color: #FFFFFF; border-radius: 25px;">
-        <h2>Donation</h2>
+        <h2 class="py-3">Donation</h2>
         <table class="table">
             <thead class="thead-light">
               <tr>
