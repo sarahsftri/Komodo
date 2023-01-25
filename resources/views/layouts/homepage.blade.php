@@ -41,7 +41,7 @@
     <div class="container-xxl py-5">
         <div class="container">
           <div class="row g-5">
-            <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
+            <div class="col-lg-6">
               <h1 class="display-5 mb-4">
                 Know More About
                 <span class="text-success">Komodo</span>!
@@ -89,7 +89,7 @@
             <p class="text-white mb-0">Weight (Pounds)</p>
           </div>
           <div
-            class="col-md-6 col-lg-3 text-center  "
+            class="col-md-6 col-lg-3 text-center "
           >
             <i class="fa fa-paw fa-3x" style="color:white"></i>
             <h1 class="text-white mb-2" data-toggle="counter-up">1,400</h1>
