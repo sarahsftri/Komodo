@@ -10,7 +10,7 @@
     <title>@yield('title')</title>
 </head>
 
-@include('header')
+{{-- @include('header') --}}
 
 <body>
     <form class="p-5" method="POST" enctype="multipart/form-data" @yield('action')>
@@ -21,31 +21,31 @@
         </div>
         <div class="form-group">
             <label>Name</label>
-            <input class="form-control text-white bg-dark" type="text" id="name" name="name" @yield('value-name')>
+            <input class="form-control text-black bg-light" type="text" id="name" name="name" @yield('value-name')>
             @error('name')
                 <p class="text-danger">{{ $message }}</p>
             @enderror
             <br>
             <label>Price</label>
-            <input class="form-control text-white bg-dark" type="text" name="price" @yield('value-price')/>
+            <input class="form-control text-black bg-light" type="text" name="price" @yield('value-price')/>
             @error('price')
                 <p class="text-danger">{{ $message }}</p>
             @enderror
             <br>
             <label>Keterangan</label>
-            <textarea class="form-control text-white bg-dark" rows="3" name="keterangan">@yield('value-keterangan')</textarea>
+            <textarea class="form-control text-black bg-light" rows="3" name="keterangan">@yield('value-keterangan')</textarea>
             @error('keterangan')
                 <p class="text-danger">{{ $message }}</p>
             @enderror
             <br>
             <label>Stock</label>
-            <input class="form-control text-white bg-dark" type="text" name="stock" @yield('value-price')/>
+            <input class="form-control text-black bg-light" type="text" name="stock" @yield('value-price')/>
             @error('stock')
                 <p class="text-danger">{{ $message }}</p>
             @enderror
             <br>
             <label>Image Url</label>
-            <input class="form-control text-white bg-dark" type="file" id="image" name="image" accept="image/*, .jpeg, .jpg, .png, .gif" @yield('value-image')>
+            <input class="form-control text-black bg-light" type="file" id="image" name="image" accept="image/*, .jpeg, .jpg, .png, .gif" @yield('value-image')>
             @error('image')
                 <p class="text-danger">{{ $message }}</p>
             @enderror
@@ -56,5 +56,5 @@
         <br><br>
     </form>
 </body>
-@include('footer')
+{{-- @include('footer') --}}
 </html>
