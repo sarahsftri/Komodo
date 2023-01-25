@@ -8,7 +8,7 @@ use App\Models\Merchandise;
 class MerchandiseController extends Controller
 {
     public function insertMerchPage(){
-        return view('insert-merch');
+        return view('layouts.addmerch');
     }
 
     public function insertMerchandise(Request $request){
@@ -29,7 +29,7 @@ class MerchandiseController extends Controller
     public function updateMerchPage($merchandise_id){
         $merchandise = Merchandise::find($merchandise_id);
 
-        return view('update-merch')->with('merchandise', $merchandise);
+        return view('layouts.editmerch')->with('merchandise', $merchandise);
     }
 
     public function updateMerchandise(Request $request, $merchandise_id){
