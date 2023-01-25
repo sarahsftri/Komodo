@@ -7,16 +7,14 @@
     @if (!Auth::check() || Auth::user()->role != 'admin')
 
     @elseif(Auth::user()->role == 'admin')
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <div class="container px-4 px-lg-5">
-            <button class="bg-dark text-white" onclick="window.location='/update-merchhandise/{{$merchandise->id}}'" style="width: 10%">Edit Movie</button>
-            <form method="POST" action="/delete-merchandise/{{$merchandise->id}}" style="width: 10%">
-                @csrf
-                @method('DELETE')
-                <button class="bg-dark text-white" type="submit">Delete Movie</button>
-            </form>
-        </div>
-    </nav>
+    <div class="container p-4">
+        <button class="btn btn-primary" style="background-color: #98BA80; width: auto" onclick="window.location='/update-merchhandise/{{$merchandise->id}}'">Edit Merchandise</button>
+        <form method="POST" action="/delete-merchandise/{{$merchandise->id}}" style="width: auto">
+            @csrf
+            @method('DELETE')
+            <button class="btn btn-primary" style="background-color: #98BA80" type="submit">Delete Merchandise</button>
+        </form>
+    </div>
     @endif
     <div class="container mb-5" style = "background-color: #FFFFFF; border-radius: 25px;">
         <div class="col mb-5">
