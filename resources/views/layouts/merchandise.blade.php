@@ -21,8 +21,8 @@
             </button>
         </div>
     </nav>
-    @else
-
+    @elseif(Auth::user()->role == "admin")
+    <button class="btn btn-primary" style="background-color: #98BA80; width: auto" onclick="window.location='/insert-merchandise/{{$merchandise->id}}'">Add Merchandise</button>
     @endif
 
     <!-- Latest Section-->
