@@ -17,16 +17,16 @@
                     <div class="col-md-8" style="margin: 8%;">
                         <div class="form-group-1">
 
-                            <label class="labels" for="update-name" style="float: left;">Enter New Username
+                            <label class="labels" for="update-name" style="float: left;">New Username
                             </label>
 
-                            <input type="text" class="form-control" placeholder="New Username" value=""
+                            <input type="text" class="form-control" placeholder="Diva Angelika" value=""
                                 id="update-name">
                         </div>
 
                         <div class="form-group-2" style="margin-top: 5%">
 
-                            <label class="labels" for="update-name" style="float: left;">Your Email
+                            <label class="labels" for="update-name" style="float: left;">Current Email
                             </label>
                             <br>
                             <input type="text" class="form-control" placeholder="diva@mail.com" value=""
@@ -47,27 +47,27 @@
 
                         <div class="col-md-12">
                             <label class="labels">Mobile Number</label>
-                            <input type="text" class="form-control" placeholder="enter phone number" value="">
+                            <input type="text" class="form-control" placeholder="Enter phone number" value="">
                         </div>
 
 
                         <div class="col-md-12">
                             <label class="labels">State</label>
-                            <input type="text" class="form-control" placeholder="enter address line 2" value="">
+                            <input type="text" class="form-control" placeholder="Enter your state" value="">
                         </div>
 
                         <div class="col-md-12">
                             <label class="labels">Country</label>
-                            <input type="text" class="form-control" placeholder="country" value="">
+                            <input type="text" class="form-control" placeholder="Your country" value="">
                         </div>
 
                         <div class="col-md-12">
                             <label class="labels">Address</label>
-                            <input type="text" class="form-control" placeholder="enter address line 1" value="">
+                            <input type="text" class="form-control" placeholder="Enter your address line" value="">
                         </div>
 
                         <div class="mt-5 text-center">
-                            <button class="btn btn-primary profile-button-save" style="float: right;" type="button">
+                            <button class="btn btn-primary profile-button-save" style="float: left;" type="button">
                                 <a href="/profile" style="text-decoration: none; color: white">
                                     Save
                                 Profile
