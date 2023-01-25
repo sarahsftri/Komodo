@@ -14,16 +14,15 @@
                             <div class="profile-picture">
                                 <img src="path/to/default-picture.jpg" alt="Profile Picture"
                                      class="img-fluid rounded-circle">
-
-                                {{-- <form> --}}
-                                    {{-- <div class=""> --}}
-                                        {{-- <label for="" class="">
+                                {{-- <form>
+                                    <div class="form-group">
+                                        <label for="profile-picture-input" class="btn btn-primary btn-sm">
                                             Update Picture
-                                        </label> --}}
-                                        {{-- <input type="file" class="form-control-file d-none"
-                                            id=""> --}}
-                                    {{-- </div> --}}
-                                {{-- </form> --}}
+                                        </label>
+                                        <input type="file" class="form-control-file d-none"
+                                            id="profile-picture-input">
+                                    </div>
+                                </form> --}}
                             </div>
                         </div>
                     </div>
@@ -32,7 +31,7 @@
 
                 <img style="  width: 250px;
                     height: 250px; border-radius: 10px;"
-                     src="https://i.pinimg.com/564x/18/b5/b5/18b5b599bb873285bd4def283c0d3c09.jpg">
+                     src="https://i.pinimg.com/564x/18/b5/b5/18b5b599bb873285bd4def283c0d3c09.jpg" id="user-img">
 
                 <form class="m-0 p-0" style="width: min-content">
                     <label for="profile-picture-input" class="btn btn-primary btn-sm m-0">
@@ -117,7 +116,7 @@
             const reader = new FileReader();
 
             reader.onload = (event) => {
-                document.querySelector('.profile-picture img').src = event.target.result;
+                document.querySelector('#user-img').src = event.target.result;
             }
 
             reader.readAsDataURL(file);
