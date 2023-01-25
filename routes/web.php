@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\TicketController;
+use App\Http\Controllers\DonationController;
 
 /*
 |--------------------------------------------------------------------------
@@ -20,17 +21,12 @@ Route::get('/', function () {
     // return view('partials.navbar_member');
 });
 
-Route::get('/profile', function () {
-    return view('registered.profile');
-});
-
-
 Route::get('/login', [UserController::class, 'viewLoginPage']);
 Route::post('/login', [UserController::class, 'login']);
 Route::get('/register', [UserController::class, 'viewRegisterPage']);
 Route::post('/register', [UserController::class, 'register']);
 Route::get('/logout', [UserController::class, 'logout']);
-// Route::get('/profile', [UserController::class, 'viewProfilePage'])->middleware('admin', 'member');
+Route::get('/profile', [UserController::class, 'viewProfilePage'])->middleware('admin', 'member');
 // Route::patch('/edit-profile', [UserController::class, 'editProfile'])->middleware('admin', 'member');
 
 Route::get('/ticket', [TicketController::class, 'viewTicketPage'])->middleware('member');
@@ -49,6 +45,4 @@ Route::post('/merchandise/{merchandise_id}', [MerchandiseController::class, 'add
 
 Route::get('/cart', [CartController::class, 'viewCartPage'])->middleware('member');
 
-Route::get('/donation', function () {
-    return view('layouts.donation');
-});
+Route::get('/donation', [DonationController::class, 'viewDonationPage'])->middleware('member');

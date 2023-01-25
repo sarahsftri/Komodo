@@ -74,7 +74,7 @@ class UserController extends Controller
     }
 
     public function viewProfilePage(){
-        return view('profile');
+        return view('registered.profile');
     }
 
     public function editProfile(Request $request){
