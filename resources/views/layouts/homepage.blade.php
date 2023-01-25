@@ -173,30 +173,31 @@
 
               </div>
             </div>
-            <div class="col-lg-4 col-md-6 wow fadeInUp">
+            <div class="col-lg-4 col-md-6">
               <div class="row g-4">
+                <div class="col-12">
+                    <a
+                      class="animal-item"
+                      href="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e8/Komodo_dragon_%28Varanus_komodoensis%29.jpg/2560px-Komodo_dragon_%28Varanus_komodoensis%29.jpg"
+                      data-lightbox="animal"
+                    >
+                    <div class="position-relative">
+                      <img class="img-fluid" src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e8/Komodo_dragon_%28Varanus_komodoensis%29.jpg/2560px-Komodo_dragon_%28Varanus_komodoensis%29.jpg"
+                      alt="" /> </div>
+                   </a>
+                  </div>
                 <div class="col-12">
                   <a
                     class="animal-item"
-                    href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ58OcgrpX1mlLB3lP9LtqwOf1qYyr7DfzKDA&usqp=CAUimg/animal-md-3.jpg"
+                    href="https://www.trailsofindochina.com/wp-content/uploads/2018/04/Komodo_Gallery3-720x347.jpg"
                     data-lightbox="animal"
                   >
                     <div class="position-relative">
-                      <img class="img-fluid" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ58OcgrpX1mlLB3lP9LtqwOf1qYyr7DfzKDA&usqp=CAUimg/animal-md-3.jpg" alt="" />
+                      <img class="img-fluid" src="https://www.trailsofindochina.com/wp-content/uploads/2018/04/Komodo_Gallery3-720x347.jpg" alt="" />
                     </div>
                   </a>
                 </div>
-                <div class="col-12">
-                  <a
-                    class="animal-item"
-                    href="https://justkardoman.files.wordpress.com/2012/03/komodo.jpg?w=848"
-                    data-lightbox="animal"
-                  >
-                  <div class="position-relative">
-                    <img class="img-fluid" src="https://justkardoman.files.wordpress.com/2012/03/komodo.jpg?w=848" alt="" />
-                  </div>
-                  </a>
-                </div>
+
               </div>
             </div>
           </div>
