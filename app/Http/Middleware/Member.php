@@ -4,6 +4,7 @@ namespace App\Http\Middleware;
 
 use Closure;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class Member
 {
@@ -17,7 +18,7 @@ class Member
     public function handle(Request $request, Closure $next)
     {
         if(!Auth::check() || Auth::user()->role != 'member'){
-            return view('register')->withErrors(['unregistered' => 'You need to register an account beforehand!']);
+            return redirect('/register')->withErrors(['unregistered' => 'You need to register an account beforehand!']);
         }
         return $next($request);
     }

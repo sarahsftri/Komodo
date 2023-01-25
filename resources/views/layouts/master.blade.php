@@ -15,7 +15,7 @@
 
 <body>
     {{-- NAVBAR GUEST --}}
-    @include('partials.navbar_guest')
+    @include('partials.navbar')
 
     {{-- NAVBAR MEMBER --}}
     {{-- @include('partials.navbar_member') --}}

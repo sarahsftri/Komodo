@@ -14,7 +14,7 @@ class UserController extends Controller
         return view('layouts.login');
     }
 
-    public function login(){
+    public function login(Request $request){
         $request->validate([
             'email' => 'required|email',
             'password' => 'required',
@@ -44,7 +44,7 @@ class UserController extends Controller
         return view('layouts.register');
     }
 
-    public function register(){
+    public function register(Request $request){
         $request->validate([
             'email' => 'required|email|unique:users,email',
             'password' => 'required|min:6',
