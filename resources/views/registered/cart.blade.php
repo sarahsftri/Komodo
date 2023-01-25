@@ -29,6 +29,7 @@
                         <img src="{{url($item->merchandise->image)}}"
                              alt="item-image" width="50" height="50">
                         <p class="p-0 m-0 fs-5">{{$item->merchandise->name}}</p>
+                        <p class="p-0 m-0 fs-5">{{$item->quantity}}</p>
                     </div>
                     <form method="POST" action="/remove-from-cart/{{$item->merchandise->id}}">
                         @csrf
