@@ -15,7 +15,7 @@
 @extends("layouts.master")
 
 @section('content')
-
+<br><br><br>
 <body>
     <form class="p-5" method="POST" enctype="multipart/form-data" @yield('action')>
         @csrf
