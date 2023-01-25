@@ -6,7 +6,7 @@
 
 @section('content')
 <body style="background-color: #BFC5A2">
-    <section class="">
+    <section style="padding-top: 6rem">
     @if (!Auth::check() || Auth::user()->role != "admin")
     <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #BFC5A2; margin-top: 20px;">
         <div class="container px-4 px-lg-5" style="background-color: #BFC5A2">
