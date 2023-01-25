@@ -32,25 +32,19 @@
                     height: 250px; border-radius: 10px;"
                      src="https://i.pinimg.com/564x/18/b5/b5/18b5b599bb873285bd4def283c0d3c09.jpg" id="user-img">
 
-                <form class="m-0 p-0" style="width: min-content">
+                <form class="m-0 p-0" style="width: min-content" enctype="multipart/form-data" method="POST" action="/edit-image/{{$user->id}}">
+                    @csrf
+                    @method('PATCH')
                     <label for="profile-picture-input" class="btn btn-primary btn-sm m-0">
                         Update Picture
                     </label>
 
-                    <input type="file" class="form-control-file d-none"
-                           id="profile-picture-input">
+                    <input type="file" class="form-control-file d-none" id="profile-picture-input">
                 </form>
 
 
                 <div class="m-0 p-0 col-md-10" style="margin: 3%;">
-                    <div class="form-group-1">
 
-                        <label class="labels" for="update-name" style="float: left;">New Username
-                        </label>
-
-                        <input type="text" class="form-control" placeholder="Diva Angelika" value=""
-                               id="update-name">
-                    </div>
 
                     <div class="form-group-2" style="margin-top: 5%">
 
@@ -71,36 +65,36 @@
                     <div class="row mt-2">
                     </div>
                     <div class="row mt-3">
+                        <form class="m-0 p-0" enctype="multipart/form-data" method="POST" action="/edit-profile/{{$user->id}}">
+                            @csrf
+                            @method('PATCH')
+                            <div class="col-md-12">
 
-                        <div class="col-md-12">
-                            <label class="labels">Mobile Number</label>
-                            <input type="text" class="form-control" placeholder="Enter phone number" value="">
-                        </div>
+                                <label class="labels" for="update-name" style="float: left;">Name
+                                </label>
 
+                                <input type="text" name="name" class="form-control" placeholder="Enter your name" value="{{$user->name}}" id="update-name">
+                            </div>
 
-                        <div class="col-md-12">
-                            <label class="labels">State</label>
-                            <input type="text" class="form-control" placeholder="Enter your state" value="">
-                        </div>
+                            <div class="col-md-12">
+                                <label class="labels">Phone Number</label>
+                                <input type="text" name="phone_number" class="form-control" placeholder="Enter your phone number" value="{{$user->phone_number}}">
+                            </div>
 
-                        <div class="col-md-12">
-                            <label class="labels">Country</label>
-                            <input type="text" class="form-control" placeholder="Your country" value="">
-                        </div>
+                            <div class="col-md-12">
+                                <label class="labels">Address</label>
+                                <input type="text" name="address" class="form-control" placeholder="Enter your address" value="{{$user->address}}">
+                            </div>
 
-                        <div class="col-md-12">
-                            <label class="labels">Address</label>
-                            <input type="text" class="form-control" placeholder="Enter your address line" value="">
-                        </div>
-
-                        <div class="mt-5 text-center">
-                            <button class="btn btn-primary profile-button-save" style="float: left;" type="button">
-                                <a href="/profile" style="text-decoration: none; color: white">
-                                    Save
-                                    Profile
-                                </a>
-                            </button>
-                        </div>
+                            <div class="mt-5 text-center">
+                                <button class="btn btn-primary profile-button-save" style="float: left;" type="button">
+                                    <a href="/profile" style="text-decoration: none; color: white">
+                                        Save
+                                        Profile
+                                    </a>
+                                </button>
+                            </div>
+                        </form>
 
                     </div>
                 </div>

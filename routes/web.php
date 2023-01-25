@@ -30,7 +30,8 @@ Route::post('/register', [UserController::class, 'register']);
 Route::get('/logout', [UserController::class, 'logout'])->middleware('account');
 Route::get('/profile', [UserController::class, 'viewProfilePage'])->middleware('account');
 Route::get('/edit-profile', [UserController::class, 'viewEditProfilePage'])->middleware('account');
-Route::patch('/edit-profile', [UserController::class, 'editProfile'])->middleware('account');
+Route::patch('/edit-image/{user_id}', [UserController::class, 'editProfilePicture'])->middleware('account');
+Route::patch('/edit-profile/{user_id}', [UserController::class, 'editProfile'])->middleware('account');
 
 Route::get('/ticket', [TicketController::class, 'viewTicketPage'])->middleware('member');
 Route::post('/ticket', [TicketController::class, 'purchaseTickets'])->middleware('member');
