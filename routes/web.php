@@ -33,7 +33,7 @@ Route::get('/profile', [UserController::class, 'viewProfilePage'])->middleware('
 // Route::patch('/edit-profile', [UserController::class, 'editProfile'])->middleware('admin', 'member');
 
 Route::get('/ticket', [TicketController::class, 'viewTicketPage'])->middleware('member');
-Route::post('/ticket', [TicketController::class, 'purchaseTicket'])->middleware('member');
+Route::post('/ticket', [TicketController::class, 'purchaseTickets'])->middleware('member');
 
 
 // Route::get('/merchandise', [MerchandiseController::class, 'viewMerchandisePage']);
