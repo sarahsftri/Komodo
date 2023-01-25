@@ -19,9 +19,7 @@ use App\Http\Controllers\HistoryController;
 |
 */
 
-Route::get('/', function () {
-    return view('layouts.homepage');
-});
+Route::get('/', [UserController::class, 'viewHomePage']);
 
 Route::get('/login', [UserController::class, 'viewLoginPage']);
 Route::post('/login', [UserController::class, 'login']);

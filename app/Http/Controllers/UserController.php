@@ -10,6 +10,12 @@ use App\Models\User;
 
 class UserController extends Controller
 {
+    public function viewHomePage(){
+        $total = DonationController::countTotalDonation();
+
+        return view('layouts.homepage')->with('total', $total);
+    }
+
     public function viewLoginPage(){
         return view('layouts.login');
     }

@@ -24,7 +24,7 @@ class DonationController extends Controller
     }
 
     // count total donation
-    public function countTotalDonation(){
+    public static function countTotalDonation(){
         $donations = Donation::all();
         $total = 0;
 
