@@ -17,7 +17,7 @@
             @csrf
             <div class="form-group">
                 <label>Amount</label>
-                <input type="amount" name="amount" class="form-control" placeholder="Enter amount donation">
+                <input type="amount" name="amount" class="form-control" placeholder="Enter quantity">
                 @error('amount')
                     <p class="text-danger">{{ $message }}</p>
                 @enderror
