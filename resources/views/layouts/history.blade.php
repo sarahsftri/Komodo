@@ -9,9 +9,9 @@
     </div>
         @foreach ($history as $hist)
         @if($hist->type == 'Ticket')
-        <div class="container" style = "background-color: #FFFFFF; border-radius: 25px;">
+        <div class="container" onclick="window.location='/view-history/{{$hist->id}}'" style = "background-color: #FFFFFF; border-radius: 25px;">
             <div class="item-image">
-                <img src="images/ticket.jpeg">
+                <img src="images/ticket.jpg">
             </div>
             <div class="item-detail mt-3">
                 <h5>
@@ -33,7 +33,7 @@
     </div>
         @foreach ($history as $hist)
         @if($hist->type == 'Merchandise')
-        <div class="container" style = "background-color: #FFFFFF; border-radius: 25px;">
+        <div class="container" onclick="window.location='/view-history/{{$hist->id}}'" style = "background-color: #FFFFFF; border-radius: 25px;">
             <div class="item-image">
                 <img src="{{url($hist->merchandise_histories[0]->image)}}">
             </div>

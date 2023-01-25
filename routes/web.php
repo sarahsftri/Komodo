@@ -48,6 +48,7 @@ Route::patch('/add-quantity/{merchandise_id}', [CartController::class, 'addQuant
 Route::patch('/reduce-quantity/{merchandise_id}', [CartController::class, 'reduceQuantity'])->middleware('member');
 
 Route::get('/history', [HistoryController::class, 'viewHistoryPage'])->middleware('member');
+Route::get('/view-history/{history_id}', [HistoryController::class, 'viewTransactionHistory'])->middleware('member');
 
 Route::get('/cart', [CartController::class, 'viewCartPage'])->middleware('member');
 Route::post('/check-out', [CartController::class, 'checkOut'])->middleware('member');
