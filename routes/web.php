@@ -51,3 +51,6 @@ Route::get('/cart', function () {
     return view('registered.cart');
 });
 
+Route::get('/profile', function () {
+    return view('registered.profile');
+});
