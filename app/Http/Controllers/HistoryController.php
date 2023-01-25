@@ -8,6 +8,14 @@ use App\Models\History;
 
 class HistoryController extends Controller
 {
+    public function viewHistoryPage(){
+        $user_id = Auth::user()->id;
+
+        $history = History::where('user_id', 'LIKE', "$user_id");
+
+        return view('layouts.history')->with('history', $history);
+    }
+
     public static function createTicketHistory($quantity, $price){
         $user_id = Auth::user()->id;
         $type = "Ticket";
