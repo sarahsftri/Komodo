@@ -6,6 +6,7 @@
 
 @section('content')
 <body style="background-color: #BFC5A2">
+    <section class="py-5">
     @if (!Auth::check() || Auth::user()->role != "admin")
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <div class="container px-4 px-lg-5">
@@ -23,9 +24,10 @@
     </nav>
     @elseif(Auth::user()->role == "admin")
     <div class="container pl-5 pb-4 ml-5 row">
-        <button class="btn btn-primary" style="background-color: #98BA80; width: auto" onclick="window.location='/insert-merchandise/{{$merchandise->id}}'">Add Merchandise</button>
+        <button class="btn btn-primary" style="background-color: #98BA80; width: auto" onclick="window.location='/insert-merchandise'">Add Merchandise</button>
     </div>
     @endif
+    </section>
 
     <!-- Latest Section-->
     <section class="py-5">
