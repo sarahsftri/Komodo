@@ -1,7 +1,7 @@
 @extends("layouts.master")
 
 @section('content')
-
+<br><br><br>
 <body style="background-color: #BFC5A2">
     <br>
     @if (!Auth::check() || Auth::user()->role != 'admin')
