@@ -90,7 +90,7 @@ class MerchandiseController extends Controller
         return redirect('/merchandise');
     }
 
-    public function deleteMerchandise($merchandise_id){
+    public function removeMerchandise($merchandise_id){
         $currMerch = Merchandise::find($merchandise_id);
         $currMerch->delete();
 
