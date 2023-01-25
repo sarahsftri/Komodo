@@ -14,56 +14,26 @@
                         src="https://i.pinimg.com/564x/18/b5/b5/18b5b599bb873285bd4def283c0d3c09.jpg">
 
 
-                        <div class="col-md-8" style="margin: 8%;">
-                            {{-- <label class="labels" style="display: inline">Username</label>
-                            <input type="text" class="form-control" placeholder="New Username" value="">
+                    <div class="col-md-8" style="margin: 8%;">
+                        <div class="form-group-1">
 
-                            <label class="labels">Email </label>
-                            <span class="name-tag text-black-50">diva@mail.com</span> --}}
+                            <label class="labels" for="update-name" style="float: left;">Enter New Username
+                            </label>
 
-                            <div class="form-group-1">
-
-                                <label class="labels" for="update-name" style="float: left;">Enter New Username
-                                </label>
-
-                                <input type="text" class="form-control" placeholder="New Username" value="" id="update-name">
-                            </div>
-
-                            <div class="form-group-2" style="margin-top: 5%">
-
-                                <label class="labels" for="update-name" style="float: left;">Your Email
-                                </label>
-                                <br>
-
-                                {{-- <button type="button" class="btn btn-secondary btn-lg" disabled>Button</button> --}}
-
-                                {{-- <input type="text" value="3" class="field left" readonly> --}}
-
-                                <input type="text" class="form-control" placeholder="diva@mail.com" value="" id="update-name" readonly>
-                            </div>
-
-
-
+                            <input type="text" class="form-control" placeholder="New Username" value=""
+                                id="update-name">
                         </div>
 
+                        <div class="form-group-2" style="margin-top: 5%">
 
+                            <label class="labels" for="update-name" style="float: left;">Your Email
+                            </label>
+                            <br>
+                            <input type="text" class="form-control" placeholder="diva@mail.com" value=""
+                                id="update-name" readonly>
+                        </div>
+                    </div>
                 </div>
-
-                {{-- <div class="col-md-5" style="align-content: center">
-                    <label class="labels">Username</label>
-                    <input type="text" class="form-control" placeholder="New Username" value="">
-
-                    <span class="name-tag text-black-50">diva@mail.com</span>
-                </div> --}}
-
-
-
-                {{-- <div class="col-md-12">
-                    <label class="labels">Email</label>
-                    <input type="text" class="form-control" placeholder="New Email" value="">
-                </div> --}}
-
-
             </div>
 
             <div class="col">
@@ -96,15 +66,13 @@
                             <input type="text" class="form-control" placeholder="enter address line 1" value="">
                         </div>
 
-                        {{-- <div class="col-md-12">
-                            <label class="labels">Email</label>
-                            <input type="text" class="form-control" placeholder="enter email id" value="">
-                        </div> --}}
-
-                        <div class="mt-5 text-center" >
-                            <button class="btn btn-primary profile-button-save" style="float: right;" type="button">Save Profile</button>
-
-                            <button class="btn btn-outline-success profile-button-edit" style="float: left;" type="button">Edit Profile</button>
+                        <div class="mt-5 text-center">
+                            <button class="btn btn-primary profile-button-save" style="float: right;" type="button">
+                                <a href="/profile" style="text-decoration: none; color: white">
+                                    Save
+                                Profile
+                                </a>
+                            </button>
                         </div>
 
                     </div>
