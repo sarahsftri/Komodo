@@ -12,7 +12,23 @@ class MerchandiseController extends Controller
     }
 
     public function insertMerchandise(Request $request){
-        // validations
+        $request->validate([
+            'name' => 'required|min:3',
+            'price' => 'required',
+            'detail' => 'required|min:10',
+            'stock' => 'required',
+            'image' => 'required|file|mimes:jpeg,jpg,png,gif',
+        ],[
+            'name.required' => 'name is required',
+            'name.min' => 'name is too short',
+            'price.required' => 'price is required',
+            'detail.required' => 'detail is required',
+            'detail.min' => 'detail is too short',
+            'stock.required' => 'stock is required',
+            'image.required' => 'image is required',
+            'image.file' => 'image needs to be a file',
+            'image.mimes' => 'image needs to be filled with jpeg, jpg, png, or gif',
+        ]);
 
         $ext = $request->image->getClientOriginalExtension();
         $first = explode(" ", $request->name)[0];
@@ -37,6 +53,23 @@ class MerchandiseController extends Controller
     }
 
     public function updateMerchandise(Request $request, $merchandise_id){
+        $request->validate([
+            'name' => 'required|min:3',
+            'price' => 'required',
+            'detail' => 'required|min:10',
+            'stock' => 'required',
+            'image' => 'file|mimes:jpeg,jpg,png,gif',
+        ],[
+            'name.required' => 'name is required',
+            'name.min' => 'name is too short',
+            'price.required' => 'price is required',
+            'detail.required' => 'detail is required',
+            'detail.min' => 'detail is too short',
+            'stock.required' => 'stock is required',
+            'image.file' => 'image needs to be a file',
+            'image.mimes' => 'image needs to be filled with jpeg, jpg, png, or gif',
+        ]);
+
         $currMerch = Merchandise::find($merchandise_id);
         $currMerch->name = $request->name;
         $currMerch->price = $request->price;
