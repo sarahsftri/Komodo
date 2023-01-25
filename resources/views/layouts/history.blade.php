@@ -16,7 +16,7 @@
                 Ticket ID: {{$hist->ticket_histories[0]->id}}
             </h5>
 
-            <p>Quantity: {{$hist->quantity}}</p>
+            <p>Quantity: {{$hist->total_quantity}}</p>
 
             <p>Total Price: IDR {{$hist->total_price}}</p>
 
@@ -37,7 +37,7 @@
                 {{$hist->merchandise_histories[0]->name}}
             </h5>
 
-            <p>Quantity: {{$hist->quantity}}</p>
+            <p>Quantity: {{$hist->total_quantity}}</p>
 
             <p>Total Price: IDR {{$hist->total_price}}</p>
 

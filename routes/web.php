@@ -44,6 +44,9 @@ Route::delete('/delete-merchandise/{merchandise_id}', [MerchandiseController::cl
 Route::post('/add-to-cart/{merchandise_id}', [MerchandiseController::class, 'addToCart'])->middleware('member');
 Route::delete('/remove-from-cart/{merchandise_id}', [CartController::class, 'removeFromCart'])->middleware('member');
 
+Route::patch('/add-quantity/{merchandise_id}', [CartController::class, 'addQuantity'])->middleware('member');
+Route::patch('/reduce-quantity/{merchandise_id}', [CartController::class, 'reduceQuantity'])->middleware('member');
+
 Route::get('/history', [HistoryController::class, 'viewHistoryPage'])->middleware('member');
 
 Route::get('/cart', [CartController::class, 'viewCartPage'])->middleware('member');

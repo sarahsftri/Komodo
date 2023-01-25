@@ -29,7 +29,18 @@
                         <img src="{{url($item->merchandise->image)}}"
                              alt="item-image" width="50" height="50">
                         <p class="p-0 m-0 fs-5">{{$item->merchandise->name}}</p>
+                        <form method="POST" action="/reduce-quantity/{{$item->merchandise->id}}">
+                            @csrf
+                            @method('PATCH')
+                            <button type="submit" class="btn btn-primary" style="background-color: #98BA80"><span class="material-symbols-outlined fs-4">-</span></button>
+                        </form>
                         <p class="p-0 m-0 fs-5">{{$item->quantity}}</p>
+                        <form method="POST" action="/add-quantity/{{$item->merchandise->id}}">
+                            @csrf
+                            @method('PATCH')
+                            <button type="submit" class="btn btn-primary" style="background-color: #98BA80"><span class="material-symbols-outlined fs-4">+</span></button>
+                        </form>
+
                     </div>
                     <form method="POST" action="/remove-from-cart/{{$item->merchandise->id}}">
                         @csrf

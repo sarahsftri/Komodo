@@ -44,24 +44,37 @@ class CartController extends Controller
         return redirect('/cart');
     }
 
-    public function addQuantity(Request $request, $merchandise_id){
+    public function addQuantity($merchandise_id){
         $user_id = Auth::user()->id;
 
         $currCart = Cart::where('user_id', 'LIKE', "$user_id")->where('merchandise_id', 'LIKE', "$merchandise_id")->get();
 
-        $currCart->quantity = $request->quantity;
-        $currCart->save();
+        $quantity = $currCart[0]->quantity + 1;
+        if($quantity == 0){
+            Cart::where('user_id', 'LIKE', "$user_id")->where('merchandise_id', 'LIKE', "$merchandise_id")->delete();
+        }else{
+            Cart::where('user_id', 'LIKE', "$user_id")->where('merchandise_id', 'LIKE', "$merchandise_id")->update([
+                'quantity' => $quantity
+            ]);
+        }
 
         return redirect('/cart');
     }
 
-    public function reduceQuantity(Request $request, $merchandise_id){
+    public function reduceQuantity($merchandise_id){
         $user_id = Auth::user()->id;
 
         $currCart = Cart::where('user_id', 'LIKE', "$user_id")->where('merchandise_id', 'LIKE', "$merchandise_id")->get();
 
-        $currCart->quantity = $request->quantity;
-        $currCart->save();
+        $quantity = $currCart[0]->quantity - 1;
+
+        if($quantity == 0){
+            Cart::where('user_id', 'LIKE', "$user_id")->where('merchandise_id', 'LIKE', "$merchandise_id")->delete();
+        }else{
+            Cart::where('user_id', 'LIKE', "$user_id")->where('merchandise_id', 'LIKE', "$merchandise_id")->update([
+                'quantity' => $quantity
+            ]);
+        }
 
         return redirect('/cart');
     }
