@@ -1,6 +1,6 @@
 @include('partials.bootstrap')
 
-<nav class="navbar navbar-expand-lg" style="background-color: #4A5E55">
+<nav class="navbar navbar-expand-lg fixed-top" style="background-color: #4A5E55">
     {{-- <a class="navbar-brand" href="#">Brand</a> --}}
     <div class="nav-logo">
         <a class="navbar-logo" href="/"><img src="{{ url('images/logo_komodo(1).png') }}" alt=""
@@ -37,6 +37,7 @@
                 <a class="nav-link text-white" href="/settings">Settings</a>
             </li>
         </ul>
+        @yield('cart')
         <ul class="navbar-nav ml-auto">
             @if(!Auth::check())
             <li class="nav-item">
