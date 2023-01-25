@@ -76,7 +76,9 @@ class CartController extends Controller
             MerchandiseHistoryController::loadMerchHistory($history_id, $item->merchandise_id, $item->quantity);
         }
 
-        $cart->delete();
+        Cart::where('user_id', 'LIKE', "$user_id")->delete();
+
+        return redirect('/cart');
     }
 
     public static function getCartCount(){

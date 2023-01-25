@@ -13,6 +13,15 @@
                 <h3 class="d-inline">| Your Shopping Cart</h3>
                 <p class="d-inline m-0 fs-5 fw-bold text-secondary">{{$quantity}} item(s)</p>
             </div>
+            @if ($quantity == 0)
+            <div class="items d-flex flex-column gap-3" style="justify-self: self-start">
+                <div class="item d-flex flex-row align-items-center">
+                    <div class="card card-body d-flex flex-row align-items-center gap-3">
+                        <h4>Your cart is currently empty!</h4>
+                    </div>
+                </div>
+            </div>
+            @endif
             @foreach ($merchandises as $item)
             <div class="items d-flex flex-column gap-3" style="justify-self: self-start">
                 <div class="item d-flex flex-row align-items-center">
