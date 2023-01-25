@@ -6,13 +6,14 @@
 
 @section('content')
 <body style="background-color: #BFC5A2">
-    <section class="py-5">
+    <section class="">
     @if (!Auth::check() || Auth::user()->role != "admin")
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <div class="container px-4 px-lg-5">
+    <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #BFC5A2; margin-top: 20px;">
+        <div class="container px-4 px-lg-5" style="background-color: #BFC5A2">
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
                 aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <form class="d-flex" action="/cart">
+                    <button class="btn btn-outline-dark" type="submit">
                         <i class="bi-cart-fill me-1"></i>
                         Cart
                         <span class="badge bg-dark text-white ms-1 rounded-pill">{{$cart_quantity}}</span>
@@ -29,7 +30,7 @@
     </section>
 
     <!-- Latest Section-->
-    <section class="py-5">
+    <section class="">
         <div class="container px-4 px-lg-5 mt-5">
             <div>
                 <h1 style="margin-bottom: 2%">Latest</h1>

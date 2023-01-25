@@ -43,12 +43,6 @@
                 <li class="nav-item container px-2">
                     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
                         aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                        <form class="d-flex" action="/cart">
-                            <button class="btn btn-primary" style="background-color: #98BA80" type="submit">
-                                <i class="bi-cart-fill me-1"></i>
-                                Cart
-                            </button>
-                        </form>
                     </button>
                 </li>
             @elseif (Auth::user()->role == "admin")
