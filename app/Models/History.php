@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class History extends Model
 {
-    protected $fillable = ['user_id', 'type', 'total_quantity', 'total_price', 'date'];
+    protected $fillable = ['user_id', 'type', 'total_quantity', 'total_price', 'transaction_date'];
 
     public function user(){
         return $this->belongsTo(User::class, "user_id", "id");

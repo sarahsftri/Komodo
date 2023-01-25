@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use App\Models\History;
+use Carbon\Carbon;
 
 class HistoryController extends Controller
 {
@@ -25,7 +26,8 @@ class HistoryController extends Controller
             'user_id' => $user_id,
             'type' => $type,
             'total_quantity' => $quantity,
-            'total_price' => $total_price
+            'total_price' => $total_price,
+            'transaction_date' => Carbon::now()
         ]);
 
         return $history->id;
@@ -38,11 +40,10 @@ class HistoryController extends Controller
             'user_id' => $user_id,
             'type' => $type,
             'total_quantity' => $quantity,
-            'total_price' => $price
+            'total_price' => $price,
+            'transaction_date' => Carbon::now()
         ]);
 
         return $history->id;
     }
-
-    // show all history
 }

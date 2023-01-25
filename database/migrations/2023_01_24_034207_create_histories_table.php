@@ -20,7 +20,7 @@ class CreateHistoriesTable extends Migration
             $table->string('type');
             $table->integer('total_quantity');
             $table->integer('total_price');
-            $table->date('date');
+            $table->date('transaction_date');
             $table->timestamps();
         });
     }
