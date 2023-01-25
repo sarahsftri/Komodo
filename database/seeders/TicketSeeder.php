@@ -14,9 +14,6 @@ class TicketSeeder extends Seeder
      */
     public function run()
     {
-        DB::table('tickets')->insert([
-            'id' => 1,
-            'price' => 50000
-        ]);
+
     }
 }

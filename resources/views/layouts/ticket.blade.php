@@ -20,6 +20,8 @@
                 <p>
                     Break free from your hectic routine by visiting Komodo Island. enjoy a holiday that will take you to explore Komodo Island and Pink Beach. You will be spoiled with charming views along the way from Komodo Island to Pink Beach. At Pink Beach, you can do snorkeling to see the natural beauty under the water. Most importantly, make sure your camera is ready to capture every special moment spent there!
                 </p>
+
+                <p>Price: Rp. 1.000.000</p>
                 <label>Quantity</label>
                 <input type="quantity" name="quantity" class="form-control" placeholder="Enter amount donation">
                 @error('quantity')
