@@ -30,7 +30,7 @@ class CartController extends Controller
     }
 
     public function removeFromCart($merchandise_id){
-        $remove = Cart::where('merchandise_id', 'LIKE', '$merchandise_id');
+        $remove = Cart::where('merchandise_id', 'LIKE', '$merchandise_id')->get();
 
         $remove->delete();
 

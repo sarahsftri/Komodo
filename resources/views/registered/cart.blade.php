@@ -21,7 +21,7 @@
                              alt="item-image" width="50" height="50">
                         <p class="p-0 m-0 fs-5">{{$item->merchandise->name}}</p>
                     </div>
-                    <a href="" class="btn p-4 fw-bold m-0"><span class="material-symbols-outlined fs-4">close</span></a>
+                    <a href="/" class="btn p-4 fw-bold m-0"><span class="material-symbols-outlined fs-4">close</span></a>
                 </div>
             </div>
             @endforeach
