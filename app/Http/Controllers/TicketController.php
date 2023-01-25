@@ -12,9 +12,10 @@ class TicketController extends Controller
     }
 
     public function purchaseTickets(Request $request){
-        $ticket_id = $request->id;
-        $history_id = HistoryController::createTicketHistory($request->quantity, $request->price);
+        $price = 1000000;
+        $history_id = HistoryController::createTicketHistory($request->quantity, $price);
         for($i = 0; $i <= $request->quantity; $i++){
+            $ticket_id = Ticket::create([]);
             TicketHistoryController::loadTicketHistory($history_id, $ticket_id);
         }
 

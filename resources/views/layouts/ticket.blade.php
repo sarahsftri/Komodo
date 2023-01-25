@@ -23,7 +23,7 @@
 
                 <p>Price: Rp. 1.000.000</p>
                 <label>Quantity</label>
-                <input type="quantity" name="quantity" class="form-control" placeholder="Enter amount donation">
+                <input type="quantity" name="quantity" class="form-control" placeholder="Enter amount of tickets">
                 @error('quantity')
                     <p class="text-danger">{{ $message }}</p>
                 @enderror
