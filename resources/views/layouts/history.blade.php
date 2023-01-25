@@ -6,56 +6,65 @@
     <br>
     <div class="container" style = "background-color: #FFFFFF; border-radius: 25px;">
         <h2>Ticket</h2>
+    </div>
         @foreach ($history as $hist)
         @if($hist->type == 'Ticket')
-        <div class="item-image">
-            <img src="images/ticket.jpeg">
-        </div>
-        <div class="item-detail mt-3">
-            <h5>
-                Ticket ID: {{$hist->ticket_histories[0]->id}}
-            </h5>
+        <div class="container" style = "background-color: #FFFFFF; border-radius: 25px;">
+            <div class="item-image">
+                <img src="images/ticket.jpeg">
+            </div>
+            <div class="item-detail mt-3">
+                <h5>
+                    Ticket ID: {{$hist->ticket_histories[0]->id}}
+                </h5>
 
-            <p>Quantity: {{$hist->total_quantity}}</p>
+                <p>Quantity: {{$hist->total_quantity}}</p>
 
-            <p>Total Price: IDR {{$hist->total_price}}</p>
+                <p>Total Price: IDR {{$hist->total_price}}</p>
 
-            <p>Date: {{$hist->created_at->format('d-m-Y')}}</p>
+                <p>Date: {{$hist->created_at->format('d-m-Y')}}</p>
+            </div>
         </div>
         @endif
         @endforeach
     </div>
     <div class="container" style = "background-color: #FFFFFF; border-radius: 25px;">
         <h2>Merchandise</h2>
+    </div>
         @foreach ($history as $hist)
         @if($hist->type == 'Merchandise')
-        <div class="item-image">
-            <img src="{{url($hist->merchandise_histories[0]->image)}}">
-        </div>
-        <div class="item-detail mt-3">
-            <h5>
-                {{$hist->merchandise_histories[0]->name}}
-            </h5>
+        <div class="container" style = "background-color: #FFFFFF; border-radius: 25px;">
+            <div class="item-image">
+                <img src="{{url($hist->merchandise_histories[0]->image)}}">
+            </div>
+            <div class="item-detail mt-3">
+                <h5>
+                    {{$hist->merchandise_histories[0]->name}}
+                </h5>
 
-            <p>Quantity: {{$hist->total_quantity}}</p>
+                <p>Quantity: {{$hist->total_quantity}}</p>
 
-            <p>Total Price: IDR {{$hist->total_price}}</p>
+                <p>Total Price: IDR {{$hist->total_price}}</p>
 
-            <p>Date: {{$hist->created_at->format('d-m-Y')}}</p>
+                <p>Date: {{$hist->created_at->format('d-m-Y')}}</p>
+            </div>
         </div>
         @endif
         @endforeach
     </div>
     <div class="container" style = "background-color: #FFFFFF; border-radius: 25px;">
         <h2>Donation</h2>
+    </div>
         @foreach ($history as $hist)
         @if($hist->type == 'Donation')
-        <div class="item-image">
-            <img src="images/donation.png">
-        </div>
-        <div class="item-detail mt-3">
-            <p>Amount of Donation: {{$hist->donation->amount}}</p>
-            <p>Date: {{$hist->created_at->format('d-m-Y')}}</p>
+        <div class="container" style = "background-color: #FFFFFF; border-radius: 25px;">
+            <div class="item-image">
+                <img src="images/donation.png">
+            </div>
+            <div class="item-detail mt-3">
+                <p>Amount of Donation: {{$hist->donation->amount}}</p>
+                <p>Date: {{$hist->created_at->format('d-m-Y')}}</p>
+            </div>
         </div>
         @endif
         @endforeach
