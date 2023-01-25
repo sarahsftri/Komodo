@@ -54,9 +54,10 @@ Route::get('/cart', function () {
     return view('registered.cart');
 });
 
-// Route::get('/merch', function () {
-//     return view('layouts.addmerch');
-// });
+Route::get('/merchandise', function () {
+    return view('layouts.merchandise');
+});
+
 Route::get('/profile', function () {
     return view('registered.profile');
 });
