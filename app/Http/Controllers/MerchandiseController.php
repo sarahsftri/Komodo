@@ -12,15 +12,19 @@ class MerchandiseController extends Controller
     }
 
     public function insertMerchandise(Request $request){
-        // upload image here
-        // $path = ???
+        // validations
+
+        $ext = $request->image->getClientOriginalExtension();
+        $first = explode(" ", $request->name)[0];
+        $imageName = $first . "-" . time() . "." . $ext;
+        $request->image->move('merch', $imageName);
 
         Merchandise::create([
             'name' => $request->name,
             'price' => $request->price,
             'detail' => $request->detail,
             'stock' => $request->stock,
-            // 'image' => $path
+            'image' => "merch/" . $imageName
         ]);
 
         return redirect('/merchandise');
@@ -39,9 +43,14 @@ class MerchandiseController extends Controller
         $currMerch->detail = $request->detail;
         $currMerch->stock = $request->stock;
 
-        $path = //;
+        if($request->image != null){
+            $ext = $request->image->getClientOriginalExtension();
+            $first = explode(" ", $request->name)[0];
+            $imageName = $first . "-" . time() . "." . $ext;
+            $request->image->move('merch', $imageName);
 
-        $currMerch->image = $request->path;
+            $currMerch->image = "merch/" . $request->$imageName;
+        }
 
         return redirect('/merchandise');
     }
