@@ -7,8 +7,8 @@
     @if (!Auth::check() || Auth::user()->role != 'admin')
 
     @elseif(Auth::user()->role == 'admin')
-    <div class="container p-4">
-        <button class="btn btn-primary" style="background-color: #98BA80; width: auto" onclick="window.location='/update-merchhandise/{{$merchandise->id}}'">Edit Merchandise</button>
+    <div class="container pl-5 pb-4 ml-5 row">
+        <button class="btn btn-primary" style="background-color: #98BA80; width: auto" onclick="window.location='/update-merchandise/{{$merchandise->id}}'">Edit Merchandise</button>
         <form method="POST" action="/delete-merchandise/{{$merchandise->id}}" style="width: auto">
             @csrf
             @method('DELETE')
