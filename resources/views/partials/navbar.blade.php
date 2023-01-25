@@ -1,6 +1,6 @@
 @include('partials.bootstrap')
 
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
+<nav class="navbar navbar-expand-lg" style="background-color: #4A5E55">
     <a class="navbar-brand" href="#">Brand</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav"
         aria-expanded="false" aria-label="Toggle navigation">
@@ -9,38 +9,38 @@
     <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav">
             <li class="nav-item">
-                <a class="nav-link" href="/">Home</a>
+                <a class="nav-link text-white" href="/">Home</a>
             </li>
             {{-- @if(!Auth::check() || Auth::user()->role != 'member')
             @elseif(Auth::user()->role == 'member') --}}
             <li class="nav-item">
-                <a class="nav-link" href="/donation">Donation</a>
+                <a class="nav-link text-white" href="/donation">Donation</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="/ticket">Ticket</a>
+                <a class="nav-link text-white" href="/ticket">Ticket</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="/merchandise">Merchandise</a>
+                <a class="nav-link text-white" href="/merchandise">Merchandise</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="/history">History</a>
+                <a class="nav-link text-white" href="/history">History</a>
             </li>
             {{-- @endif --}}
             <li class="nav-item">
-                <a class="nav-link" href="/profile">Profile</a>
+                <a class="nav-link text-white" href="/profile">Profile</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="/settings">Settings</a>
+                <a class="nav-link text-white" href="/settings">Settings</a>
             </li>
         </ul>
         <ul class="navbar-nav ml-auto">
             @if(!Auth::check())
             <li class="nav-item">
-                <a class="btn btn-primary" href="/login" role="button">Login</a>
+                <a class="btn btn-primary" style="background-color: #98BA80" href="/login" role="button">Login</a>
             </li>
 
             <li class="nav-item">
-                <a class="btn btn-primary" href="/register" role="button">Register</a>
+                <a class="btn btn-primary" style="background-color: #98BA80" href="/register" role="button">Register</a>
             </li>
             @else
             <li class="nav-item">
