@@ -77,4 +77,10 @@ class MerchandiseController extends Controller
 
         return redirect()->back();
     }
+
+    public function viewMerchandise($merchandise_id){
+        $merchandise = Merchandise::find($merchandise_id);
+
+        return view('layouts.viewmerch')->with('merchandise', $merchandise);
+    }
 }
