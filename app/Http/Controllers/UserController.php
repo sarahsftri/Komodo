@@ -91,4 +91,19 @@ class UserController extends Controller
 
         return redirect('/profile');
     }
+
+    public function editProfilePicture(Request $request){
+        $user_id = Auth::user()->id;
+        $currUser = User::find($user_id);
+
+        $ext = $request->image->getClientOriginalExtension();
+        $first = explode(" ", $request->name)[0];
+        $imageName = $first . "-" . time() . "." . $ext;
+        $request->image->move('profile', $imageName);
+
+        $currUser->image = "profile/" . $imageName;
+        $currUser->save();
+
+        return redirect('/profile');
+    }
 }

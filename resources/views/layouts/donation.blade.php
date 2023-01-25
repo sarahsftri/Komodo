@@ -4,7 +4,7 @@
 
 <body style="background-color: #BFC5A2">
     <br>
-<div class="container" style = "background-color: #FFFFFF; border-radius: 25px;">
+<div class="container mb-5" style = "background-color: #FFFFFF; border-radius: 25px;">
     <div class="row">
         {{-- <h2>Make an Donation</h2> --}}
       <div class="col">

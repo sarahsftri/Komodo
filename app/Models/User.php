@@ -21,7 +21,8 @@ class User extends Authenticatable
         'password',
         'name',
         'phone_number',
-        'address'
+        'address',
+        'image'
     ];
 
     public function histories(){

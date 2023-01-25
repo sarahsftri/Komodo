@@ -5,60 +5,92 @@
 <body style="background-color: #BFC5A2">
     <br>
     <div class="container" style = "background-color: #FFFFFF; border-radius: 25px;">
-        <h2>Ticket</h2>
-        @foreach ($history as $hist)
-        @if($hist->type == 'Ticket')
-        <div class="item-image">
-            <img src="{{asset('#')}}">
-        </div>
-        <div class="item-detail mt-3">
-            <h5>
-                Ticket ID: {{$hist->ticket_histories[0]->id}}
-            </h5>
+        <h2 class="py-3">Ticket</h2>
+        <table class="table">
+            <thead class="thead-light">
+              <tr>
+                <th scope="col">#</th>
+                <th scope="col">Date</th>
+                <th scope="col"> Qty</th>
+                <th scope="col">Total (IDR)</th>
+                <th scope="col">Detail</th>
+              </tr>
+            </thead>
+            <tbody>
+                @foreach ($history as $hist)
+                    @if($hist->type == 'Ticket')
+                    <tr>
+                        <th scope="row"></th>
+                        <td><p>{{$hist->created_at->format('d-m-Y')}}</p></td>
+                        <td><p>{{$hist->total_quantity}}</p></td>
+                        <td> <p style="color: green;">{{$hist->total_price}}</p></td>
+                        <td><a href="/view-history/{{$hist->id}}">...</a></td>
+                      </tr>
+                    @endif
+                @endforeach
 
-            <p>Quantity: {{$hist->quantity}}</p>
+            </tbody>
+          </table>
 
-            <p>Total Price: IDR {{$hist->total_price}}</p>
-
-            <p>Date: {{$hist->created_at->format('d-m-Y')}}</p>
-        </div>
-        @endif
-        @endforeach
     </div>
     <div class="container" style = "background-color: #FFFFFF; border-radius: 25px;">
-        <h2>Merchandise</h2>
-        @foreach ($history as $hist)
-        @if($hist->type == 'Merchandise')
-        <div class="item-image">
-            <img src="{{asset('#')}}">
-        </div>
-        <div class="item-detail mt-3">
-            <h5>
-                {{$hist->merchandise_histories[0]->name}}
-            </h5>
+        <h2 class="py-3">Merchandise</h2>
+        <table class="table">
+            <thead class="thead-light">
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Date</th>
+                    <th scope="col"> Name</th>
+                    <th scope="col"> Qty</th>
+                    <th scope="col">Total (IDR)</th>
+                    <th scope="col">Detail</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach ($history as $hist)
+                    @if($hist->type == 'Merchandise')
+                    <tr>
+                        <th scope="row"></th>
+                        <td><p>{{$hist->created_at->format('d-m-Y')}}</p></td>
+                        <td><p>{{$hist->merchandise_histories[0]->name}}</p></td>
+                        <td><p>{{$hist->total_quantity}}</p></td>
+                        <td> <p style="color: green;">{{$hist->total_price}}</p></td>
+                        <td><a href="/view-history/{{$hist->id}}">...</a></td>
+                      </tr>
+                    @endif
+                @endforeach
 
-            <p>Quantity: {{$hist->quantity}}</p>
+            </tbody>
+          </table>
 
-            <p>Total Price: IDR {{$hist->total_price}}</p>
-
-            <p>Date: {{$hist->created_at->format('d-m-Y')}}</p>
-        </div>
-        @endif
-        @endforeach
     </div>
     <div class="container" style = "background-color: #FFFFFF; border-radius: 25px;">
-        <h2>Donation</h2>
-        @foreach ($history as $hist)
-        @if($hist->type == 'Donation')
-        <div class="item-image">
-            <img src="{{asset('#')}}">
-        </div>
-        <div class="item-detail mt-3">
-            <p>Amount of Donation: {{$hist->donation->amount}}</p>
-            <p>Date: {{$hist->created_at->format('d-m-Y')}}</p>
-        </div>
-        @endif
-        @endforeach
+        <h2 class="py-3">Donation</h2>
+        <table class="table">
+            <thead class="thead-light">
+              <tr>
+                <th scope="col">#</th>
+                <th scope="col">Date</th>
+                <th scope="col">Amount of Donation (IDR)</th>
+
+              </tr>
+            </thead>
+            <tbody>
+                @foreach ($history as $hist)
+                    @if($hist->type == 'Donation')
+                    <tr>
+                        <th scope="row"></th>
+                        <td><p>{{$hist->created_at->format('d-m-Y')}}</p></td>
+                        <td><p style="color: green;">{{$hist->donation->amount}}</p></td>
+
+
+                      </tr>
+
+                    @endif
+                @endforeach
+
+            </tbody>
+          </table>
     </div>
 </body>
 @endsection

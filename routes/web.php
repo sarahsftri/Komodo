@@ -28,7 +28,7 @@ Route::post('/login', [UserController::class, 'login']);
 Route::get('/register', [UserController::class, 'viewRegisterPage']);
 Route::post('/register', [UserController::class, 'register']);
 Route::get('/logout', [UserController::class, 'logout']);
-Route::get('/profile', [UserController::class, 'viewProfilePage'])->middleware('admin', 'member');
+Route::get('/profile', [UserController::class, 'viewProfilePage']);
 // Route::patch('/edit-profile', [UserController::class, 'editProfile'])->middleware('admin', 'member');
 
 Route::get('/ticket', [TicketController::class, 'viewTicketPage'])->middleware('member');
@@ -36,6 +36,7 @@ Route::post('/ticket', [TicketController::class, 'purchaseTickets'])->middleware
 
 Route::get('/merchandise', [MerchandiseController::class, 'viewMerchandisePage']);
 Route::post('/merchandise/{merchandise_id}', [MerchandiseController::class, 'addToCart'])->middleware('member');
+Route::get('/view-merchandise/{merchandise_id}', [MerchandiseController::class, 'viewMerchandise']);
 Route::get('/insert-merchandise', [MerchandiseController::class, 'insertMerchPage'])->middleware('admin');
 Route::post('/insert-merchandise', [MerchandiseController::class, 'insertMerchandise'])->middleware('admin');
 Route::get('/update-merchandise/{merchandise_id}', [MerchandiseController::class, 'updateMerchPage'])->middleware('admin');
@@ -44,7 +45,11 @@ Route::delete('/delete-merchandise/{merchandise_id}', [MerchandiseController::cl
 Route::post('/add-to-cart/{merchandise_id}', [MerchandiseController::class, 'addToCart'])->middleware('member');
 Route::delete('/remove-from-cart/{merchandise_id}', [CartController::class, 'removeFromCart'])->middleware('member');
 
+Route::patch('/add-quantity/{merchandise_id}', [CartController::class, 'addQuantity'])->middleware('member');
+Route::patch('/reduce-quantity/{merchandise_id}', [CartController::class, 'reduceQuantity'])->middleware('member');
+
 Route::get('/history', [HistoryController::class, 'viewHistoryPage'])->middleware('member');
+Route::get('/view-history/{history_id}', [HistoryController::class, 'viewTransactionHistory'])->middleware('member');
 
 Route::get('/cart', [CartController::class, 'viewCartPage'])->middleware('member');
 Route::post('/check-out', [CartController::class, 'checkOut'])->middleware('member');

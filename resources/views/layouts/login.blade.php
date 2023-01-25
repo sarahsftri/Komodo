@@ -8,7 +8,9 @@
         <br>
         <h3 text-align="center">Login</h3><br>
         @auth
+        <div class="mb-5 pb-3">
             You are already logged in. Go to the <a href="/">Main Page</a>.
+        </div>
         @else
             <form action="/login" method="POST">
                 @csrf

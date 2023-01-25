@@ -5,6 +5,8 @@
 @endsection
 
 @section('content')
+<body style="background-color: #BFC5A2">
+    <section class="py-5">
     @if (!Auth::check() || Auth::user()->role != "admin")
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <div class="container px-4 px-lg-5">
@@ -19,9 +21,12 @@
             </button>
         </div>
     </nav>
-    @else
-
+    @elseif(Auth::user()->role == "admin")
+    <div class="container pl-5 pb-4 ml-5 row">
+        <button class="btn btn-primary" style="background-color: #98BA80; width: auto" onclick="window.location='/insert-merchandise'">Add Merchandise</button>
+    </div>
     @endif
+    </section>
 
     <!-- Latest Section-->
     <section class="py-5">
@@ -32,7 +37,7 @@
             <div class="row gx-4 gx-lg-5 row-cols-2 row-cols-md-3 row-cols-xl-4 justify-content-center">
                 @foreach ($latest as $new)
                 <div class="col mb-5">
-                    <div class="card h-100">
+                    <div class="card h-100" onclick="window.location='/view-merchandise/{{$new->id}}'">
                         <img class="card-img-top" src="{{url($new->image)}}" alt="..." />
                         <div class="card-body p-4">
                             <div class="text-center">
@@ -62,7 +67,7 @@
             <div class="row gx-4 gx-lg-5 row-cols-2 row-cols-md-3 row-cols-xl-4 justify-content-center">
                 @foreach ($merch as $item)
                 <div class="col mb-5">
-                    <div class="card h-100">
+                    <div class="card h-100" onclick="window.location='/view-merchandise/{{$item->id}}'">
                         <img class="card-img-top" src="{{url($item->image)}}" alt="..." />
                         <div class="card-body p-4">
                             <div class="text-center">
@@ -70,16 +75,21 @@
                                 {{$item->price}}
                             </div>
                         </div>
+                        @if(!Auth::check() || Auth::user()->role != "admin")
                         <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
                             <form class="text-center" method="POST" action="/add-to-cart/{{$item->id}}">
                                 @csrf
                                 <button type="submit" class="btn btn-outline-dark mt-auto">Add to Cart</button>
                             </form>
                         </div>
+                        @elseif(Auth::user()->role == "admin")
+
+                        @endif
                     </div>
                 </div>
                 @endforeach
             </div>
         </div>
     </section>
+</body>
 @endsection

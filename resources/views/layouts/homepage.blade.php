@@ -2,42 +2,73 @@
 
 @section('homepage')
 
-    {{-- SLIDER --}}
-    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-        <ol class="carousel-indicators">
-            <li data-target="" data-slide-to="0" class="active"></li>
-            <li data-target="" data-slide-to="1"></li>
-            <li data-target="" data-slide-to="2"></li>
-        </ol>
-        <div class="carousel-inner">
-            <div class="carousel-item active">
-                <div class="pickgradient w-100" style="height:80vh; overflow: hidden;">
-                    <img class="d-block w-100 image1"
-                        src="https://i.pinimg.com/564x/07/75/e7/0775e73e023c40d84bbf30f481bfa14b.jpg" alt="First slide">
+
+    <div class="container-fluid bg-dark p-0 mb-5">
+        <div class="row g-0 flex-column-reverse flex-lg-row">
+          <div class="col-lg-6 p-0" data-wow-delay="0.1s">
+            <div
+              class="header-bg h-100 d-flex flex-column justify-content-center align-items-center p-5"
+              style="background: linear-gradient(rgba(0, 0, 0, .7), rgba(0, 0, 0, .7)),
+                url('https://cdn.pixabay.com/photo/2015/06/19/21/24/avenue-815297__480.jpg')
+                center center no-repeat;
+                background-size: cover;"
+            >
+              <h1 class="display-4 text-light mb-5">
+                <span class="text-monospace">Komodo</span> <br>Dragon
+              </h1>
+              <div class="d-flex d-flex justify-content-center align-items-center pt-4">
+
+                <a href="https://www.youtube.com/watch?v=jiXk21Oh9f4"
+                  ><i class="fa fa-play center" style="font-size:48px;color:red"></i>
+                  </a
+
+                >
+              </div>
+
+
+            </div>
+          </div>
+          <div class="col-lg-6">
+            <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+                <ol class="carousel-indicators">
+                    <li data-target="" data-slide-to="0" class="active"></li>
+                    <li data-target="" data-slide-to="1"></li>
+                    <li data-target="" data-slide-to="2"></li>
+                </ol>
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <div class="pickgradient w-100" style="height:80vh; overflow: hidden;">
+                            <img class="d-block w-100 h-200 image1"
+                                src="https://i.pinimg.com/564x/07/75/e7/0775e73e023c40d84bbf30f481bfa14b.jpg" alt="First slide"
+                                style="height:500px;">
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="pickgradient w-100" style="height:80vh; overflow: hidden;">
+                            <img class="d-block w-100 image1"
+                                src="https://st2.depositphotos.com/1025317/10783/i/600/depositphotos_107838174-stock-photo-attack-of-a-komodo-dragon.jpg" alt="First slide"
+                                style="height:500px;">
+                            </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="pickgradient w-100" style="height:80vh; overflow: hidden;">
+                            <img class="d-block w-100 image1"
+                                src="https://blue.kumparan.com/image/upload/fl_progressive,fl_lossy,c_fill,q_auto:best,w_640/v1603952153/j35afqsolhzt7wakdhik.jpg" alt="First slide">
+                        </div>
+                    </div>
+                    <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Previous</span>
+                    </a>
+                    <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Next</span>
+                    </a>
                 </div>
             </div>
-            <div class="carousel-item">
-                <div class="pickgradient w-100" style="height:80vh; overflow: hidden;">
-                    <img class="d-block w-100 image1"
-                        src="https://st2.depositphotos.com/1025317/10783/i/600/depositphotos_107838174-stock-photo-attack-of-a-komodo-dragon.jpg" alt="First slide">
-                </div>
-            </div>
-            <div class="carousel-item">
-                <div class="pickgradient w-100" style="height:80vh; overflow: hidden;">
-                    <img class="d-block w-100 image1"
-                        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcREVUPMEiejA6-FNr3px2QfDLhMYL8iLzzwlA&usqp=CAU" alt="First slide">
-                </div>
-            </div>
-            <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="sr-only">Previous</span>
-            </a>
-            <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="sr-only">Next</span>
-            </a>
+          </div>
         </div>
-    </div>
+      </div>
     <div class="container-xxl py-5">
         <div class="container">
           <div class="row g-5">
@@ -203,6 +234,91 @@
           </div>
         </div>
       </div>
+<br>
+<br>
+      </div>
 
+      <br>
+      <div class="container" data-aos="fade-up">
+        <div class="col-lg-6">
+            <p><span class="text-success me-2">#</span>Goals</p>
+            <h1 class="display-5 mb-0">
+              Our<span class="text-success"> Goals</span>
+            </h1>
+          </div>
+          <br>
+        <div class="row">
+          <div class="col-md-6 col-lg-3 text-center">
+            <div class="card" style="width: 18rem;">
+                <div class="card-body">
+                    <i class="bi bi-droplet fa-3x"></i>
+                  <h5 class="card-title">Clean Water</h5>
+                  <p class="card-text">Ad libitum access to clean water is essential to maintain feed intake. </p>
+                </div>
+              </div>
+          </div>
+
+
+          <div class="col-md-6 col-lg-3 text-center">
+            <div class="card" style="width: 18rem;">
+                <div class="card-body">
+                    <i class="fa fa-leaf fa-3x"></i>
+                  <h5 class="card-title">Clean Air</h5>
+                  <p class="card-text">The effects of air quality on animals principally can be divided in health damage.</p>
+                </div>
+              </div>
+          </div>
+
+
+          <div class="col-md-6 col-lg-3 text-center">
+            <div class="card" style="width: 18rem;">
+                <div class="card-body">
+                    <i class='fas fa-drumstick-bite fa-3x'></i>
+                  <h5 class="card-title">Healty Feed</h5>
+                  <p class="card-text">The basic nutrients that animals require for maintenance, growth, reproduction, and good health.</p>
+                </div>
+              </div>
+          </div>
+
+          <div class="col-md-6 col-lg-3 text-center">
+            <div class="card" style="width: 18rem;">
+                <div class="card-body">
+                    <i class="fa fa-heart fa-3x"></i>
+                  <h5 class="card-title">Regular Health Check</h5>
+                  <p class="card-text">Regular health check for treating any possible illnesses, both immediately and in the future.</p>
+                </div>
+              </div>
+          </div>
+        </div>
+      </div>
+
+      <br><br><br><br><br>
+      <hr style="width:30%;text-align:left;margin-left:0; color:green">
+      <br>
+      <div class="container-xxl py-5">
+        <div class="container">
+          <div class="row g-5">
+            <div class="col-lg-6">
+                <div class="img-border">
+                    <img class="img-thumbnail" src="https://arc-anglerfish-arc2-prod-pmn.s3.amazonaws.com/public/D2LTRFIHZZEXTAJ55QIZBWGJEU.jpg" alt="" />
+                </div>
+
+            </div>
+            <div class="col-lg-6">
+                <h1 class="display-5 mb-4">
+                    Donation Collected <br>
+                    <span class="text-success">This Month</span>!
+                  </h1>
+                  <br><br><br><br>
+                  <h5 class="mb-3">
+                    <span class="text-success">50M</span>  Out of 100M
+                  </h5>
+                  <div class="progress">
+                    <div class="progress-bar bg-success" role="progressbar" style="width: 50%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+                  </div>
+            </div>
+          </div>
+        </div>
+      </div>
 
 @endsection

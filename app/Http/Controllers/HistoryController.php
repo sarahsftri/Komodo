@@ -57,4 +57,10 @@ class HistoryController extends Controller
 
         return $history->id;
     }
+
+    public function viewTransactionHistory($history_id){
+        $history = History::find($history_id);
+
+        return view('layouts.viewhistory')->with('history', $history);
+    }
 }
