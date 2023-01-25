@@ -40,7 +40,7 @@
 
         <ul class="navbar-nav ml-auto">
             @if(!Auth::check() || Auth::user()->role != "admin")
-                <li class="nav-item container px-2">
+                <li class="nav-item">
                     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
                         aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                         <form class="d-flex" action="/cart">
@@ -64,7 +64,7 @@
             </li>
             @else
             <li class="nav-item">
-                <a class="nav-link text-white">Welcome, @if(!Auth::check() || Auth::user()->role != 'admin')User @else Admin @endif</a>
+                <a class="nav-link text-white" style="width: 100%">Welcome, @if(!Auth::check() || Auth::user()->role != 'admin')User @else Admin @endif</a>
             </li>
             <li class="nav-item">
                 <a class="btn btn-primary" style="background-color: #98BA80" href="/logout">Logout</a>
