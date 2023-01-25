@@ -78,4 +78,12 @@ class CartController extends Controller
 
         $cart->delete();
     }
+
+    public static function getCartCount(){
+        $user_id = Auth::user()->id;
+        $cart = Cart::where('user_id', 'LIKE', "$user_id")->get();
+        $cart_quantity = count($cart);
+
+        return $cart_quantity;
+    }
 }

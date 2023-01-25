@@ -17,7 +17,7 @@
             <div class="items d-flex flex-column gap-3" style="justify-self: self-start">
                 <div class="item d-flex flex-row align-items-center">
                     <div class="card card-body d-flex flex-row align-items-center gap-3">
-                        <img src="https://i.pinimg.com/564x/0b/10/52/0b105243af5ce8a7dd5a5de92c4c5c81.jpg"
+                        <img src="{{url($item->merchandise->image)}}"
                              alt="item-image" width="50" height="50">
                         <p class="p-0 m-0 fs-5">{{$item->merchandise->name}}</p>
                     </div>
