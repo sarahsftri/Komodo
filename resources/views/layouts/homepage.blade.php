@@ -234,6 +234,91 @@
           </div>
         </div>
       </div>
+<br>
+<br>
+      </div>
 
+      <br>
+      <div class="container" data-aos="fade-up">
+        <div class="col-lg-6">
+            <p><span class="text-success me-2">#</span>Goals</p>
+            <h1 class="display-5 mb-0">
+              Our<span class="text-success"> Goals</span>
+            </h1>
+          </div>
+          <br>
+        <div class="row">
+          <div class="col-md-6 col-lg-3 text-center">
+            <div class="card" style="width: 18rem;">
+                <div class="card-body">
+                    <i class="bi bi-droplet fa-3x"></i>
+                  <h5 class="card-title">Clean Water</h5>
+                  <p class="card-text">Ad libitum access to clean water is essential to maintain feed intake. </p>
+                </div>
+              </div>
+          </div>
+
+
+          <div class="col-md-6 col-lg-3 text-center">
+            <div class="card" style="width: 18rem;">
+                <div class="card-body">
+                    <i class="fa fa-leaf fa-3x"></i>
+                  <h5 class="card-title">Clean Air</h5>
+                  <p class="card-text">The effects of air quality on animals principally can be divided in health damage.</p>
+                </div>
+              </div>
+          </div>
+
+
+          <div class="col-md-6 col-lg-3 text-center">
+            <div class="card" style="width: 18rem;">
+                <div class="card-body">
+                    <i class='fas fa-drumstick-bite fa-3x'></i>
+                  <h5 class="card-title">Healty Feed</h5>
+                  <p class="card-text">The basic nutrients that animals require for maintenance, growth, reproduction, and good health.</p>
+                </div>
+              </div>
+          </div>
+
+          <div class="col-md-6 col-lg-3 text-center">
+            <div class="card" style="width: 18rem;">
+                <div class="card-body">
+                    <i class="fa fa-heart fa-3x"></i>
+                  <h5 class="card-title">Regular Health Check</h5>
+                  <p class="card-text">Regular health check for treating any possible illnesses, both immediately and in the future.</p>
+                </div>
+              </div>
+          </div>
+        </div>
+      </div>
+
+      <br><br><br><br><br>
+      <hr style="width:30%;text-align:left;margin-left:0; color:green">
+      <br>
+      <div class="container-xxl py-5">
+        <div class="container">
+          <div class="row g-5">
+            <div class="col-lg-6">
+                <div class="img-border">
+                    <img class="img-thumbnail" src="https://arc-anglerfish-arc2-prod-pmn.s3.amazonaws.com/public/D2LTRFIHZZEXTAJ55QIZBWGJEU.jpg" alt="" />
+                </div>
+
+            </div>
+            <div class="col-lg-6">
+                <h1 class="display-5 mb-4">
+                    Donation Collected <br>
+                    <span class="text-success">This Month</span>!
+                  </h1>
+                  <br><br><br><br>
+                  <h5 class="mb-3">
+                    <span class="text-success">5M</span>  Out of 100M
+                  </h5>
+                  <div class="progress">
+                    <div class="progress-bar bg-success" role="progressbar" style="width: 50%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+                  </div>
+            </div>
+          </div>
+        </div>
+      </div>
 
 @endsection
