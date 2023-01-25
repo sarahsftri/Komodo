@@ -53,6 +53,12 @@
                     </label>
                 </div>
             </div>
+            <div class="card information">
+                <label for="card" class="fs-5">Card Infromation</label>
+                <input type="text" class="form-control" id="cardId" name="cardId" placeholder="CC Number">
+                <input type="text" class="form-control" id="expDate" name="expDate" placeholder="Expired Date">
+                <input type="text" class="form-control" id="secCode" name="secCode" placeholder="Security Code">
+            </div>
             <div class="ship">
                 <label for="address" class="fs-5">Shipping</label>
                 <textarea class="form-control" id="address" name="address" placeholder="Input your address" rows="3"></textarea>
