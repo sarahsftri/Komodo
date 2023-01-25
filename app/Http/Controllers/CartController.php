@@ -44,7 +44,6 @@ class CartController extends Controller
         return redirect('/cart');
     }
 
-    // still not sure about the add/reduce quantity of items
     public function addQuantity(Request $request, $merchandise_id){
         $user_id = Auth::user()->id;
 
