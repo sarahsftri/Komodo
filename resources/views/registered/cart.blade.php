@@ -36,7 +36,8 @@
                 </div>
             </div>
         </div>
-        <form class="right-container p-5 gap-3 d-flex flex-column justify-content-between" action="">
+        <form class="right-container p-5 gap-3 d-flex flex-column justify-content-between" action="/check-out" method="POST">
+            @csrf
             <h3>| Summary</h3>
             <div class="payment">
                 <h5>Payment Method</h5>
@@ -69,7 +70,7 @@
                 <label for="address" class="fs-5">Shipping</label>
                 <textarea class="form-control" id="address" name="address" placeholder="Input your address" rows="3"></textarea>
             </div>
-            <a href="#" class="btn btn-outline-dark">Checkout</a>
+            <button type="submit" class="btn btn-outline-dark">Checkout</button>
         </form>
     </div>
 @endsection

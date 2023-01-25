@@ -59,7 +59,7 @@ class CartController extends Controller
         return redirect('/cart');
     }
 
-    public function checkOut(){ //check out all item in cart
+    public function checkOut(){
         $user_id = Auth::user()->id;
         $cart = Cart::where('user_id', 'LIKE', "$user_id")->get();
         $quantity = 0;
