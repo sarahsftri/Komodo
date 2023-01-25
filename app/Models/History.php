@@ -20,4 +20,8 @@ class History extends Model
     public function merchandise_histories(){
         return $this->belongsToMany(History::class, "merchandise__histories", "history_id", "merchandise_id");
     }
+
+    public function donation(){
+        return $this->hasOne(Donation::class, "history_id", "id");
+    }
 }
