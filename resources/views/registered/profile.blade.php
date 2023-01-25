@@ -10,14 +10,6 @@
             <div class="col-md-5 border-right">
                 <div class="d-flex flex-column align-items-center text-center p-3 py-5">
 
-
-
-
-
-
-
-
-
                     <img class="mt-5"
                         style="  width: 250px;
                     height: 250px; border-radius: 10px; margin: 40px;"
@@ -71,7 +63,7 @@
 
                         <div class="mt-5 text-center">
                             <button class="btn btn-outline-success profile-button-edit" style="float: left;" type="button">
-                                <a href="/editprofile" style="text-decoration: none; color: green">Edit Profile</a>
+                                <a href="/edit-profile" style="text-decoration: none; color: green">Edit Profile</a>
                             </button>
                         </div>
                     </div>

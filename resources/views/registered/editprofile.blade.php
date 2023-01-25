@@ -28,7 +28,6 @@
                     </div>
                 </div>
 
-
                 <img style="  width: 250px;
                     height: 250px; border-radius: 10px;"
                      src="https://i.pinimg.com/564x/18/b5/b5/18b5b599bb873285bd4def283c0d3c09.jpg" id="user-img">
