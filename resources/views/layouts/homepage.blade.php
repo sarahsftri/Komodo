@@ -311,7 +311,7 @@
                   </h1>
                   <br><br><br><br>
                   <h5 class="mb-3">
-                    <span class="text-success">5M</span>  Out of 100M
+                    <span class="text-success">50M</span>  Out of 100M
                   </h5>
                   <div class="progress">
                     <div class="progress-bar bg-success" role="progressbar" style="width: 50%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
