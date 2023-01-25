@@ -14,12 +14,16 @@
                     {{$merchandise->price}}
                 </div>
             </div>
-            <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                <form class="text-center" method="POST" action="/add-to-cart/{{$merchandise->id}}">
-                    @csrf
-                    <button type="submit" class="btn btn-outline-dark mt-auto">Add to Cart</button>
-                </form>
-            </div>
+            @if(!Auth::check() || Auth::user()->role != "admin")
+                <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                    <form class="text-center" method="POST" action="/add-to-cart/{{$item->id}}">
+                        @csrf
+                        <button type="submit" class="btn btn-outline-dark mt-auto">Add to Cart</button>
+                    </form>
+                </div>
+            @elseif(Auth::user()->role == "admin")
+
+            @endif
         </div>
     </div>
 @endsection
