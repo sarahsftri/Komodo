@@ -5,6 +5,7 @@
 @endsection
 
 @section('content')
+<body style="background-color: #BFC5A2">
     @if (!Auth::check() || Auth::user()->role != "admin")
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <div class="container px-4 px-lg-5">
@@ -83,4 +84,5 @@
             </div>
         </div>
     </section>
+</body>
 @endsection
