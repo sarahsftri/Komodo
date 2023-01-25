@@ -14,12 +14,12 @@
                 @csrf
                 <div class="form-group">
                     <label>Email</label>
-                    <input type="email" name="email" class="form-control" placeholder="Enter your email" value="{{(Cookie::get('mycookie')!=null) ? Cookie::get('mycookie') : ""}}">
+                    <input type="email" name="email" class="form-control" placeholder="Enter your email" value="{{(Cookie::get('email-cookie')!=null) ? Cookie::get('email-cookie') : ""}}">
                     @error('email')
                         <p class="text-danger">{{ $message }}</p>
                     @enderror
                     <label>Password</label>
-                    <input type="password" name="password" class="form-control" placeholder="Enter your password">
+                    <input type="password" name="password" class="form-control" placeholder="Enter your password" value="{{(Cookie::get('password-cookie')!=null) ? Cookie::get('password-cookie') : ""}}">
                     @error('password')
                         <p class="text-danger">{{ $message }}</p>
                     @enderror
@@ -29,7 +29,7 @@
                     @endif
                 </div>
                 <div style="display:flex; flex-direction:row">
-                    <input style="width: 1em" type="checkbox" name="remember" id="remember" checked={{Cookie::get('mycookie')!=null}}>
+                    <input style="width: 1em" type="checkbox" name="remember" id="remember" checked={{Cookie::get('email-cookie')!=null}}>
                     <label>Remember me</label>
                     <br>
                 </div>
