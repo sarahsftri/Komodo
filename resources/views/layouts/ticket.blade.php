@@ -4,16 +4,19 @@
 
 <body style="background-color: #BFC5A2">
     <br>
-<div class="container" style = "background-color: #FFFFFF; border-radius: 25px;">
+<div class="container" style = "background-color: #FFFFFF; border-radius: 10px;">
     <div class="row">
       <div class="col">
-        <div class="card border-20" style="margin: 50px">
+        <div class="title" style="margin-left: 50px; margin-top: 25px">
+            <h2>Ticket</h2>
+        </div>
+        <div class="card border-20" style="margin: 50px;">
             <img class="" src="https://i.pinimg.com/564x/70/cf/97/70cf975db4b639d867d476e876cb08ca.jpg"
                 alt="Card image cap">
         </div>
       </div>
       <div class="col" style="margin: 50px">
-        <form action="/register" method="POST">
+        <form action="/ticket" method="POST">
             @csrf
             <div class="form-group">
                 <h3 text-align="center">What You’ll Experience</h3><br>

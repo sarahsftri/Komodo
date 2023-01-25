@@ -25,7 +25,7 @@ class HistoryController extends Controller
             'user_id' => $user_id,
             'type' => $type,
             'total_quantity' => $quantity,
-            'total_price' => $total_price
+            'total_price' => $total_price,
         ]);
 
         return $history->id;
@@ -38,11 +38,9 @@ class HistoryController extends Controller
             'user_id' => $user_id,
             'type' => $type,
             'total_quantity' => $quantity,
-            'total_price' => $price
+            'total_price' => $price,
         ]);
 
         return $history->id;
     }
-
-    // show all history
 }

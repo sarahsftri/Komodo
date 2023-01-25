@@ -29,7 +29,7 @@ class MerchandiseSeeder extends Seeder
             'price' => 60000,
             'detail' => "Cotton Combed 20s, Size - Unisex: L ( LD 50, P 71 )",
             'stock' => 300,
-            'image' => "merch/komodo-tshirt.jpg"
+            'image' => "merch/komodo-tshirt.jpg",
         ]);
 
         DB:: table('merchandises')->insert([

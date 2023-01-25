@@ -9,8 +9,6 @@ class History extends Model
 {
     protected $fillable = ['user_id', 'type', 'total_quantity', 'total_price'];
 
-    protected $dates = ['date'];
-
     public function user(){
         return $this->belongsTo(User::class, "user_id", "id");
     }
