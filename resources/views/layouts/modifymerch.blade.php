@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+{{-- <!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -10,7 +10,11 @@
     <title>@yield('title')</title>
 </head>
 
-{{-- @include('header') --}}
+@include('header') --}}
+
+@extends("layouts.master")
+
+@section('content')
 
 <body>
     <form class="p-5" method="POST" enctype="multipart/form-data" @yield('action')>
@@ -57,4 +61,4 @@
     </form>
 </body>
 {{-- @include('footer') --}}
-</html>
+@endsection
