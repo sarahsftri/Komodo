@@ -55,7 +55,3 @@ Route::get('/cart', function () {
 Route::get('/merchandise', function () {
     return view('layouts.merchandise');
 });
-
-Route::get('/profile', function () {
-    return view('registered.profile');
-});

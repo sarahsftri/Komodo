@@ -74,7 +74,10 @@ class UserController extends Controller
     }
 
     public function viewProfilePage(){
-        return view('registered.profile');
+        $user_id = Auth::user()->id;
+        $user = User::find($user_id);
+
+        return view('registered.profile')->with('user', $user);
     }
 
     public function editProfile(Request $request){
