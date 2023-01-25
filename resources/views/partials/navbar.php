@@ -11,6 +11,20 @@
             <li class="nav-item">
                 <a class="nav-link" href="#">Home</a>
             </li>
+            @if(Auth::user()->role == 'member')
+            <li class="nav-item">
+                <a class="nav-link" href="/donation">Donation</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/ticket">Ticket</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Merchandise</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">History</a>
+            </li>
+            @endif
             <li class="nav-item">
                 <a class="nav-link" href="#">Profile</a>
             </li>
@@ -19,10 +33,20 @@
             </li>
         </ul>
         <ul class="navbar-nav ml-auto">
+            @if(!Auth::check())
+            <li class="nav-item">
+                <a class="btn btn-primary" href="/login" role="button">Login</a>
+            </li>
+
+            <li class="nav-item">
+                <a class="btn btn-primary" href="/register" role="button">Register</a>
+            </li>
+            @else
             <li class="nav-item">
                 <a class="nav-link" href="#">Welcome, User</a>
             </li>
             <li class="nav-item"> </li>
+            @endif
         </ul>
     </div>
 </nav>

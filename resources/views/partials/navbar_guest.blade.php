@@ -16,7 +16,7 @@
                 <a class="nav-link" href="/ticket">Ticket</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#">Merchendise</a>
+                <a class="nav-link" href="#">Merchandise</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="#">History</a>
