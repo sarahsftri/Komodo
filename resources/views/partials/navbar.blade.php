@@ -29,7 +29,9 @@
                 <a class="nav-link text-white" href="/history">History</a>
             </li>
             @elseif(Auth::check() && Auth::user()->role == 'admin')
-
+            <li class="nav-item">
+                <a class="nav-link text-white" href="/merchandise">Merchandise</a>
+            </li>
             @endif
             <li class="nav-item">
                 <a class="nav-link text-white" href="/profile">Profile</a>
