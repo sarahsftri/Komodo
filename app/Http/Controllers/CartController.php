@@ -12,7 +12,7 @@ class CartController extends Controller
         $user_id = Auth::user()->id;
         $merchandise = Cart::where('user_id', 'LIKE', "$user_id")->get();
 
-        return view('cart')->with('merchandise', $merchandise);
+        return view('registered.cart')->with('merchandise', $merchandise);
     }
 
     public static function addMerchToCart($merchandise_id){
