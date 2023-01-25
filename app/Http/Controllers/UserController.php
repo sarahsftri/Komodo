@@ -29,7 +29,8 @@ class UserController extends Controller
         ];
 
         if($request->remember){
-            Cookie::queue('cookie', $request->email, 30);
+            Cookie::queue('email-cookie', $request->email, 30);
+            Cookie::queue('password-cookie', $request->password, 30);
         }
 
         if(Auth::attempt($credentials, true)){
