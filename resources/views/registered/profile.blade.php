@@ -41,32 +41,32 @@
 
                         <div class="col-md-12">
                             <label class="labels">Mobile Number</label>
-                            <input type="text" class="form-control" placeholder="enter phone number" value="">
+                            <input type="text" class="form-control" placeholder="Enter Phone Number" value="">
                         </div>
 
 
                         <div class="col-md-12">
                             <label class="labels">State</label>
-                            <input type="text" class="form-control" placeholder="enter address line 2" value="">
+                            <input type="text" class="form-control" placeholder="Enter State" value="">
                         </div>
 
                         <div class="col-md-12">
                             <label class="labels">Country</label>
-                            <input type="text" class="form-control" placeholder="country" value="">
+                            <input type="text" class="form-control" placeholder="Enter Country" value="">
                         </div>
 
                         <div class="col-md-12">
                             <label class="labels">Address</label>
-                            <input type="text" class="form-control" placeholder="enter address line 1" value="">
+                            <input type="text" class="form-control" placeholder="Enter Address" value="">
                         </div>
 
                         <div class="col-md-12">
                             <label class="labels">Email</label>
-                            <input type="text" class="form-control" placeholder="enter email id" value="">
+                            <input type="text" class="form-control" placeholder="Enter Email" value="">
                         </div>
 
                         <div class="mt-5 text-center" >
-                            <button class="btn btn-primary profile-button" style="float: right;" type="button">Save Profile</button>
+                            <button class="btn btn-primary profile-button" style="float: right; background-color: #98BA80;" type="button">Save Profile</button>
                         </div>
 
                     </div>
