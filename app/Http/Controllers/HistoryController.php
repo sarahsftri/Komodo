@@ -43,4 +43,17 @@ class HistoryController extends Controller
 
         return $history->id;
     }
+
+    public static function createDonationHistory($ammount){
+        $user_id = Auth::user()->id;
+        $type = "Donation";
+
+        $history = History::create([
+            'user_id' => $user_id,
+            'type' => $type,
+            'total ammount' => $ammount,
+        ]);
+
+        return $history->id;
+    }
 }
