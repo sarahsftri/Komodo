@@ -44,9 +44,10 @@
                     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
                         aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                         <form class="d-flex" action="/cart">
-                            <button class="btn btn-primary" style="background-color: #98BA80" type="submit">
+                            <button class="btn btn-outline-dark" type="submit">
                                 <i class="bi-cart-fill me-1"></i>
                                 Cart
+                                <span class="badge bg-dark text-white ms-1 rounded-pill">{{$cart_quantity}}</span>
                             </button>
                         </form>
                     </button>
