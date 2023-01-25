@@ -2,42 +2,73 @@
 
 @section('homepage')
 
-    {{-- SLIDER --}}
-    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-        <ol class="carousel-indicators">
-            <li data-target="" data-slide-to="0" class="active"></li>
-            <li data-target="" data-slide-to="1"></li>
-            <li data-target="" data-slide-to="2"></li>
-        </ol>
-        <div class="carousel-inner">
-            <div class="carousel-item active">
-                <div class="pickgradient w-100" style="height:80vh; overflow: hidden;">
-                    <img class="d-block w-100 image1"
-                        src="https://i.pinimg.com/564x/07/75/e7/0775e73e023c40d84bbf30f481bfa14b.jpg" alt="First slide">
+
+    <div class="container-fluid bg-dark p-0 mb-5">
+        <div class="row g-0 flex-column-reverse flex-lg-row">
+          <div class="col-lg-6 p-0" data-wow-delay="0.1s">
+            <div
+              class="header-bg h-100 d-flex flex-column justify-content-center align-items-center p-5"
+              style="background: linear-gradient(rgba(0, 0, 0, .7), rgba(0, 0, 0, .7)),
+                url('https://cdn.pixabay.com/photo/2015/06/19/21/24/avenue-815297__480.jpg')
+                center center no-repeat;
+                background-size: cover;"
+            >
+              <h1 class="display-4 text-light mb-5">
+                <span class="text-monospace">Komodo</span> <br>Dragon
+              </h1>
+              <div class="d-flex d-flex justify-content-center align-items-center pt-4">
+
+                <a href="https://www.youtube.com/watch?v=jiXk21Oh9f4"
+                  ><i class="fa fa-play center" style="font-size:48px;color:red"></i>
+                  </a
+
+                >
+              </div>
+
+
+            </div>
+          </div>
+          <div class="col-lg-6">
+            <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+                <ol class="carousel-indicators">
+                    <li data-target="" data-slide-to="0" class="active"></li>
+                    <li data-target="" data-slide-to="1"></li>
+                    <li data-target="" data-slide-to="2"></li>
+                </ol>
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <div class="pickgradient w-100" style="height:80vh; overflow: hidden;">
+                            <img class="d-block w-100 h-200 image1"
+                                src="https://i.pinimg.com/564x/07/75/e7/0775e73e023c40d84bbf30f481bfa14b.jpg" alt="First slide"
+                                style="height:500px;">
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="pickgradient w-100" style="height:80vh; overflow: hidden;">
+                            <img class="d-block w-100 image1"
+                                src="https://st2.depositphotos.com/1025317/10783/i/600/depositphotos_107838174-stock-photo-attack-of-a-komodo-dragon.jpg" alt="First slide"
+                                style="height:500px;">
+                            </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="pickgradient w-100" style="height:80vh; overflow: hidden;">
+                            <img class="d-block w-100 image1"
+                                src="https://blue.kumparan.com/image/upload/fl_progressive,fl_lossy,c_fill,q_auto:best,w_640/v1603952153/j35afqsolhzt7wakdhik.jpg" alt="First slide">
+                        </div>
+                    </div>
+                    <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Previous</span>
+                    </a>
+                    <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Next</span>
+                    </a>
                 </div>
             </div>
-            <div class="carousel-item">
-                <div class="pickgradient w-100" style="height:80vh; overflow: hidden;">
-                    <img class="d-block w-100 image1"
-                        src="https://st2.depositphotos.com/1025317/10783/i/600/depositphotos_107838174-stock-photo-attack-of-a-komodo-dragon.jpg" alt="First slide">
-                </div>
-            </div>
-            <div class="carousel-item">
-                <div class="pickgradient w-100" style="height:80vh; overflow: hidden;">
-                    <img class="d-block w-100 image1"
-                        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcREVUPMEiejA6-FNr3px2QfDLhMYL8iLzzwlA&usqp=CAU" alt="First slide">
-                </div>
-            </div>
-            <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="sr-only">Previous</span>
-            </a>
-            <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="sr-only">Next</span>
-            </a>
+          </div>
         </div>
-    </div>
+      </div>
     <div class="container-xxl py-5">
         <div class="container">
           <div class="row g-5">
