@@ -1,6 +1,7 @@
 @extends("layouts.master")
 
 @section('content')
+<br><br><br>
 <body style="background-color: #BFC5A2">
     <br>
     <div class="container box" style="background-color: #ffffff; border-radius: 25px;">
