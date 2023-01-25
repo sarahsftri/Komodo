@@ -33,20 +33,18 @@ Route::get('/profile', [UserController::class, 'viewProfilePage'])->middleware('
 // Route::patch('/edit-profile', [UserController::class, 'editProfile'])->middleware('admin', 'member');
 
 Route::get('/ticket', [TicketController::class, 'viewTicketPage'])->middleware('member');
-
-// Route::get('/ticket', [TicketController::class, 'viewTicketPage'])->middleware('member');
 // Route::post('/ticket', [TicketController::class, 'purchaseTicket'])->middleware('member');
 
 
-// Route::get('/merchandise', [MerchandiseController::class, 'viewMerchandisePage'])->middleware('admin', 'member');
+// Route::get('/merchandise', [MerchandiseController::class, 'viewMerchandisePage']);
 Route::post('/merchandise/{merchandise_id}', [MerchandiseController::class, 'addToCart'])->middleware('member');
 Route::get('/insert-merchandise', [MerchandiseController::class, 'insertMerchPage'])->middleware('admin');
 Route::post('/insert-merchandise', [MerchandiseController::class, 'insertMerchandise'])->middleware('admin');
 Route::get('/update-merchandise/{merchandise_id}', [MerchandiseController::class, 'updateMerchPage'])->middleware('admin');
 Route::patch('/update-merchandise/{merchandise_id}', [MerchandiseController::class, 'updateMerchandise'])->middleware('admin');
-// Route::delete('/delete-merchandise/{merchandise_id}', [MerchandiseController::class, 'removeMerchandise'])->middleware('admin');
+Route::delete('/delete-merchandise/{merchandise_id}', [MerchandiseController::class, 'removeMerchandise'])->middleware('admin');
 
-// Route::get('/cart', [CartController::class, 'viewCartPage'])->middleware('member');
+Route::get('/cart', [CartController::class, 'viewCartPage'])->middleware('member');
 
 Route::get('/donation', [DonationController::class, 'viewDonationPage'])->middleware('member');
 

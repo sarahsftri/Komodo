@@ -36,9 +36,9 @@
                 <p class="text-danger">{{ $message }}</p>
             @enderror
             <br>
-            <label>Keterangan</label>
-            <textarea class="form-control text-black bg-light" rows="3" name="keterangan">@yield('value-keterangan')</textarea>
-            @error('keterangan')
+            <label>Detail</label>
+            <textarea class="form-control text-black bg-light" rows="3" name="detail">@yield('value-detail')</textarea>
+            @error('detail')
                 <p class="text-danger">{{ $message }}</p>
             @enderror
             <br>
@@ -49,7 +49,7 @@
             @enderror
             <br>
             <label>Image Url</label>
-            <input class="form-control text-black bg-light" type="file" id="image" name="image" accept="image/*, .jpeg, .jpg, .png, .gif" @yield('value-image')>
+            <input class="form-control text-black bg-light" type="file" id="image" name="image" accept="image/*, .jpeg, .jpg, .png, .gif" @yield('required-image')>
             @error('image')
                 <p class="text-danger">{{ $message }}</p>
             @enderror
