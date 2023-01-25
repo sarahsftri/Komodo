@@ -4,7 +4,7 @@
 
 <body style="background-color: #BFC5A2">
     <br>
-<div class="container" style = "background-color: #FFFFFF; border-radius: 10px;">
+<div class="container mb-5" style = "background-color: #FFFFFF; border-radius: 10px;">
     <div class="row">
       <div class="col">
         <div class="title" style="margin-left: 50px; margin-top: 25px">
