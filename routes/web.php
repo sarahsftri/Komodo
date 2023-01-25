@@ -4,6 +4,9 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\TicketController;
 use App\Http\Controllers\DonationController;
+use App\Http\Controllers\MerchandiseController;
+use App\Http\Controllers\CartController;
+use App\Http\Controllers\HistoryController;
 
 /*
 |--------------------------------------------------------------------------
@@ -37,10 +40,10 @@ Route::get('/ticket', [TicketController::class, 'viewTicketPage'])->middleware('
 
 // Route::get('/merchandise', [MerchandiseController::class, 'viewMerchandisePage'])->middleware('admin', 'member');
 Route::post('/merchandise/{merchandise_id}', [MerchandiseController::class, 'addToCart'])->middleware('member');
-// Route::get('/insert-merchandise', [MerchandiseController::class, 'insertMerchPage'])->middleware('admin');
-// Route::post('/insert-merchandise', [MerchandiseController::class, 'insertMerchandise'])->middleware('admin');
-// Route::get('/update-merchandise/{merchandise_id}', [MerchandiseController::class, 'updateMerchPage'])->middleware('admin');
-// Route::patch('/update-merchandise/{merchandise_id}', [MerchandiseController::class, 'updateMerchandise'])->middleware('admin');
+Route::get('/insert-merchandise', [MerchandiseController::class, 'insertMerchPage'])->middleware('admin');
+Route::post('/insert-merchandise', [MerchandiseController::class, 'insertMerchandise'])->middleware('admin');
+Route::get('/update-merchandise/{merchandise_id}', [MerchandiseController::class, 'updateMerchPage'])->middleware('admin');
+Route::patch('/update-merchandise/{merchandise_id}', [MerchandiseController::class, 'updateMerchandise'])->middleware('admin');
 // Route::delete('/delete-merchandise/{merchandise_id}', [MerchandiseController::class, 'removeMerchandise'])->middleware('admin');
 
 // Route::get('/cart', [CartController::class, 'viewCartPage'])->middleware('member');
@@ -51,9 +54,9 @@ Route::get('/cart', function () {
     return view('registered.cart');
 });
 
-Route::get('/merch', function () {
-    return view('layouts.modifymerch');
-});
+// Route::get('/merch', function () {
+//     return view('layouts.addmerch');
+// });
 Route::get('/profile', function () {
     return view('registered.profile');
 });
