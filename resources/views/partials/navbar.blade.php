@@ -1,7 +1,11 @@
 @include('partials.bootstrap')
 
 <nav class="navbar navbar-expand-lg" style="background-color: #4A5E55">
-    <a class="navbar-brand" href="#">Brand</a>
+    {{-- <a class="navbar-brand" href="#">Brand</a> --}}
+    <div class="nav-logo">
+        <a class="navbar-logo" href="/"><img src="{{ url('images/logo_komodo(1).png') }}" alt=""
+                class="logo-2"></a>
+    </div>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav"
         aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
