@@ -20,7 +20,7 @@ class MerchandiseController extends Controller
             'price' => $request->price,
             'detail' => $request->detail,
             'stock' => $request->stock,
-            'image' => $path
+            // 'image' => $path
         ]);
 
         return redirect('/merchandise');
@@ -61,7 +61,7 @@ class MerchandiseController extends Controller
     }
 
     public function addToCart($merchandise_id){
-        CartController::addMerchToCart($request->id);
+        CartController::addMerchToCart($merchandise_id);
 
         return redirect()->back();
     }

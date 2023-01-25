@@ -28,6 +28,9 @@
                     @error('password_confirmation')
                         <p class="text-danger">{{ $message }}</p>
                     @enderror
+                    @if ($errors->has('unregistered'))
+                        <p class="text-danger">{{ $errors->first('unregistered') }}</p>
+                    @endif
                 </div>
                 <br>
                 <input type="submit" value="Register" class="btn btn-primary" style="background-color: #98BA80">
