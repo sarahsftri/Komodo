@@ -11,7 +11,7 @@
         <div class="left-container p-5 d-flex flex-column justify-content-between">
             <div class="d-flex align-items-center justify-content-between">
                 <h3 class="d-inline">| Your Shopping Cart</h3>
-                <p class="d-inline m-0 fs-5 fw-bold text-secondary">3 item(s)</p>
+                <p class="d-inline m-0 fs-5 fw-bold text-secondary">{{$quantity}} item(s)</p>
             </div>
             @foreach ($merchandises as $item)
             <div class="items d-flex flex-column gap-3" style="justify-self: self-start">

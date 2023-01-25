@@ -12,12 +12,13 @@ class CartController extends Controller
         $user_id = Auth::user()->id;
         $merchandises = Cart::where('user_id', 'LIKE', "$user_id")->get();
         $total_price = 0;
+        $quantity = count($merchandises);
 
         foreach($merchandises as $item){
             $total_price += ($item->merchandise->price * $item->quantity);
         }
 
-        return view('registered.cart')->with('merchandises', $merchandises)->with('price', $total_price);
+        return view('registered.cart')->with('merchandises', $merchandises)->with('price', $total_price)->with('quantity', $quantity);
     }
 
     public static function addMerchToCart($merchandise_id){
