@@ -20,7 +20,7 @@
 
             <p>Total Price: IDR {{$hist->total_price}}</p>
 
-            <p>Date: {{$hist->date}}</p>
+            <p>Date: {{$hist->created_at->format('d-m-Y')}}</p>
         </div>
         @endif
         @endforeach
@@ -41,7 +41,7 @@
 
             <p>Total Price: IDR {{$hist->total_price}}</p>
 
-            <p>Date: {{$hist->date}}</p>
+            <p>Date: {{$hist->created_at->format('d-m-Y')}}</p>
         </div>
         @endif
         @endforeach
@@ -55,7 +55,7 @@
         </div>
         <div class="item-detail mt-3">
             <p>Amount of Donation: {{$hist->donation->amount}}</p>
-            <p>Date: {{$hist->date}}</p>
+            <p>Date: {{$hist->created_at->format('d-m-Y')}}</p>
         </div>
         @endif
         @endforeach

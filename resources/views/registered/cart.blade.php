@@ -11,22 +11,24 @@
         <div class="left-container p-5 d-flex flex-column justify-content-between">
             <div class="d-flex align-items-center justify-content-between">
                 <h3 class="d-inline">| Your Shopping Cart</h3>
-                <p class="d-inline m-0 fs-5 fw-bold text-secondary">3 item(s)</p>
+                <p class="d-inline m-0 fs-5 fw-bold text-secondary">{{$quantity}} item(s)</p>
             </div>
+            @foreach ($merchandises as $item)
             <div class="items d-flex flex-column gap-3" style="justify-self: self-start">
                 <div class="item d-flex flex-row align-items-center">
                     <div class="card card-body d-flex flex-row align-items-center gap-3">
                         <img src="https://i.pinimg.com/564x/0b/10/52/0b105243af5ce8a7dd5a5de92c4c5c81.jpg"
                              alt="item-image" width="50" height="50">
-                        <p class="p-0 m-0 fs-5">Item Name</p>
+                        <p class="p-0 m-0 fs-5">{{$item->merchandise->name}}</p>
                     </div>
                     <a href="" class="btn p-4 fw-bold m-0"><span class="material-symbols-outlined fs-4">close</span></a>
                 </div>
             </div>
+            @endforeach
             <div class="d-flex justify-content-between align-items-center">
                 <a href="#" class="fw-bold btn p-0 m-0">&lt;&lt; Back to Shop</a>
                 <div class="total p-3">
-                    <p class="fw-bold fs-5 m-0">Total Rp. 125.500</p>
+                    <p class="fw-bold fs-5 m-0">Total Rp. {{$price}}</p>
                 </div>
             </div>
         </div>

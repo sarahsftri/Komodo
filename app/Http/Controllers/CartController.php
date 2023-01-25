@@ -10,9 +10,15 @@ class CartController extends Controller
 {
     public function viewCartPage(){
         $user_id = Auth::user()->id;
-        $merchandise = Cart::where('user_id', 'LIKE', "$user_id")->get();
+        $merchandises = Cart::where('user_id', 'LIKE', "$user_id")->get();
+        $total_price = 0;
+        $quantity = count($merchandises);
 
-        return view('registered.cart')->with('merchandise', $merchandise);
+        foreach($merchandises as $item){
+            $total_price += ($item->merchandise->price * $item->quantity);
+        }
+
+        return view('registered.cart')->with('merchandises', $merchandises)->with('price', $total_price)->with('quantity', $quantity);
     }
 
     public static function addMerchToCart($merchandise_id){
