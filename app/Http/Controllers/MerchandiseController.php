@@ -49,8 +49,10 @@ class MerchandiseController extends Controller
             $imageName = $first . "-" . time() . "." . $ext;
             $request->image->move('merch', $imageName);
 
-            $currMerch->image = "merch/" . $request->$imageName;
+            $currMerch->image = "merch/" . $imageName;
         }
+
+        $currMerch->save();
 
         return redirect('/merchandise');
     }

@@ -5,7 +5,7 @@
 @endsection
 
 @section('action')
-    action="/edit-merch/{{$apa->id}}"
+    action="/update-merchandise/{{$merchandise->id}}"
 @endsection
 
 @section('method')
@@ -13,25 +13,21 @@
 @endsection
 
 @section('value-name')
-    value='{{$apa->name}}'
+    value='{{$merchandise->name}}'
 @endsection
 
 @section('value-price')
-{{$apa->apa}}
+    value='{{$merchandise->price}}'
 @endsection
 
-@section('value-keterangan')
-    value={{$actor->DOB}}
+@section('value-detail')
+{{$merchandise->detail}}
 @endsection
 
 @section('value-stock')
-    value='{{$apa->apa}}'
-@endsection
-
-@section('value-image')
-    value='{{$apa->apa}}'
+    value='{{$merchandise->stock}}'
 @endsection
 
 @section('button')
-    <button style="background-color:#98BA80; width:20%" type="submit" class="btn btn-success">Edit Actor</button>
+    <button style="background-color:#98BA80; width:20%" type="submit" class="btn btn-success">Edit Merchandise</button>
 @endsection

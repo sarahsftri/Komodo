@@ -5,10 +5,10 @@
 @endsection
 
 @section('action')
-    action="/add-merch"
+    action="/insert-merchandise"
 @endsection
 
-@section('value-image')
+@section('required-image')
     required
 @endsection
 
