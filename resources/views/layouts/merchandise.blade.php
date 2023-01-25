@@ -8,8 +8,8 @@
 <body style="background-color: #BFC5A2">
     <section class="py-5">
     @if (!Auth::check() || Auth::user()->role != "admin")
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <div class="container px-4 px-lg-5">
+    <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #BFC5A2">
+        <div class="container px-4 px-lg-5" style="background-color: #BFC5A2">
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
                 aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <form class="d-flex" action="/cart">
