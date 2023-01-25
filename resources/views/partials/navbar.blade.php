@@ -48,8 +48,8 @@
             <li class="nav-item">
                 <a class="nav-link">Welcome, User</a>
             </li>
-            <li class="nav-item" href="/logout">
-                <a class="nav-link">Logout</a>
+            <li class="nav-item">
+                <a class="nav-link" href="/logout">Logout</a>
             </li>
             @endif
         </ul>
